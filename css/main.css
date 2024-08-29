@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@897&display=swap');
+/*  font-family: "Montserrat", sans-serif;  */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+/* font-family: "Inter", sans-serif; Textos en Detalle*/
+
+* {
+    margin: 0;
+    padding: 0;
+
+    scroll-behavior: smooth;
+}
+
+*,::after,::before {box-sizing: border-box;}
+
+html,body {height: 100%;}
+
+::selection {background-color: var(--navi-blue);}
+
+input,button,textarea,select {font: inherit;}
+
+a {text-decoration: none;}
+
+button {border: none;}
+
+br {
+    -webkit-user-select: none;
+    user-select: none;
+    -moz-user-select: none;
+}
+
+body {
+    /*Text & Nucleo*/
+    --navi-blue: #1a69e07c;
+    --white: #cfcfcf;
+    --black: #000000;
+
+    /*
+    --background-fenalitio: url(background.jpg);
+    */
+
+    /*Background*/
+    background: rgb(10, 11, 11);
+
+    /*Background
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    */
+
+    /*Header*/
+    --header:#15151500;
+    --header-on:#000000f7;
+
+    /*Webkit Bar*/
+    --bg: #121212;
+    --bar: #202020;
+    --bg-bar: var(--header-on);
+
+    /*Pop*/
+    --bg-pop: #121212;
+    --white-dn:var(--white);
+
+    --status: #121212;
+    --status-base: #ababab;
+
+    /*Botones*/
+    --buttons:#11111184;
+    --buttons-hover:#7575757a;
+
+    /*Hover*/
+    --hover: #7575757a;
+    --hover-bar: #ffffff;
+}
+
+body::-webkit-scrollbar {width: 10px;   background: var(--bg);}
+body::-webkit-scrollbar-thumb {border: 0px solid var(--bg);   background: var(--bar);}
+body::-webkit-scrollbar-track {border-radius: 5px;      background: none;}
+body::-webkit-scrollbar:hover {background: var(--bg-bar);}
+body::-webkit-scrollbar:hover body::-webkit-scrollbar-thumb {border: 1px solid var(--bg-bar);}
+
+@media (max-width:780px) {
+    .scroll-frost {overflow: hidden;}
+    ::-webkit-scrollbar {display: none;}
+}

@@ -1,0 +1,178 @@
+.Pop {
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.432);
+    position: fixed;
+    display: flex;
+
+    pointer-events: none;
+    opacity: 0;
+
+    z-index: 4;
+    transition: all 0.3s ease-out;
+}
+
+.Pop-out {
+    pointer-events:all;
+    opacity: 1;
+}
+
+.flex-pop {
+    display: flex;
+    justify-content: center;
+}
+
+.Pop-center {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.Pop-text {
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.Pop-center-text {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+}
+
+.Pop-icon {
+    width: 100%;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+
+    transform: translate(0, -50px);
+    pointer-events: none;
+
+}
+
+.Pop-bubble {
+    width: 80px;
+    height: 80px;
+
+    border-radius: 80px;
+    background-color: #000000;
+    pointer-events: none;
+}
+
+@media (max-width:780px) {
+    .Pop-icon { 
+        height: 20px;
+        transform: translate(0, -90px);
+    }
+
+    .Pop-bubble {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.Ability {
+    width: 100%;
+    height: 20px;
+
+    padding: 3px;
+    background-color: var(--status-base);
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+}
+
+.Status {
+    height: 100%;
+
+    background-color: var(--status);
+    border-radius: 20px;
+}
+
+.St-VS {width: 75%;}
+    .St-Terml {width: 35%;}
+.St-Git {width: 47%;}
+    .St-GitGit {width: 35%;}
+.St-Fig {width: 65%;}
+.St-HTML {width: 90%;}
+.St-CSS {width: 65%;}
+.St-JS {width: 45%;}
+    .St-Node {width: 39%;}
+    .St-React {width: 47%;}
+    .St-Astr {width: 58%;}
+.St-PY {width: 48%;}
+.St-SQL {width: 43%;}
+
+.Status-Animated {
+    animation: Status 0.63s ease-out;
+}
+
+@keyframes Status {
+    0% { width: 0%;}
+    100% {}
+}
+
+.Pop-VS, .Pop-Git, .Pop-Fig, .Pop-HTML, .Pop-CSS, .Pop-JS, .Pop-PY, .Pop-SQL, .Pop-Fr, .Pop-Office {
+    width: 50vw;
+    max-width: 720px;
+    height: auto;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: auto;
+    margin-bottom: auto;
+
+    background-color: var(--bg-pop);
+    color: var(--white-dn);
+
+    display: flex;
+    position: fixed;
+
+    bottom: 0;
+    border-radius: 30px 30px;
+
+    z-index: 5;
+
+    transform: translate(0,0);
+    opacity: 0;
+    transition: 0.175s ease-out;
+
+    padding: 0 25px 25px 25px;
+    flex-direction: column;
+    pointer-events: none;
+
+    
+}
+
+
+.Pop-VS-Out, .Pop-Git-Out, .Pop-Fig-Out, .Pop-HTML-Out, .Pop-CSS-Out, .Pop-JS-Out, .Pop-PY-Out, .Pop-SQL-Out, .Pop-Fr-Out, .Pop-Office-Out{
+    transform: translate(0,-50px);
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+
+@media (max-width:780px) {
+    .Pop-VS, .Pop-Git, .Pop-Fig, .Pop-HTML, .Pop-CSS, .Pop-JS, .Pop-PY, .Pop-SQL, .Pop-Fr, .Pop-Office {
+        width: 100%;
+        height: auto;
+
+        bottom: 0;
+        border-radius: 35px 35px 0 0;
+        padding: 25px 25px 40px 25px;
+
+        transform: translate(0,300px);
+    }
+
+    .Pop-VS-Out, .Pop-Git-Out, .Pop-Fig-Out, .Pop-HTML-Out, .Pop-CSS-Out, .Pop-JS-Out, .Pop-PY-Out, .Pop-SQL-Out, .Pop-Fr-Out, .Pop-Office-Out{
+        transform: translate(0,0);
+        opacity: 1;
+    }
+
+}
