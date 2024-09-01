@@ -17,6 +17,8 @@
 .email {background-image: url(clarity_email-solid.svg);}
 
 .factory {background-image: url(material-symbols_factory.svg);}
+.copy {background-image: url(ph_copyright-bold.svg);}
+.user {background-image: url(bxs_user.svg);}
 
 .vslogo {background-image: url(vscode.svg);}
 .fig {background-image: url(fig.svg);}
@@ -28,3 +30,8 @@
 .py {background-image: url(py.svg);}
 .sql {background-image: url(sql.svg);}
 .frame {background-image: url(frames.svg);}
+
+.proyect-waltz {background-image: url(-proyect-waltz.svg);}
+.proyect-techemet {background-image: url(-proyect-techmet.svg);}
+
+.enter-svg {background-image: url(iconamoon_enter-bold.svg);}
