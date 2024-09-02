@@ -34,12 +34,11 @@ body {
     --white: #ffffff;
     --black: #000000;
 
-    /*
-    --background-fenalitio: url(background.jpg);
-    */
-
     /*Background*/
-    background: rgb(10, 11, 11);
+    background: var(--background);
+    --background: #070707;
+    --stock-perfil:#19191b;
+    --border-stock-perfil: #ffffff53;
 
     /*Background
     background-position: center;
@@ -51,8 +50,12 @@ body {
     --header:#15151500;
     --header-on:#000000f7;
 
+    /*Botones*/
+    --buttons:#11111184;
+    --buttons-hover:#7575757a;
+
     /*Webkit Bar*/
-    --bg: #121212;
+    --bg: #0d0d0d;
     --bar: #202020;
     --bg-bar: var(--header-on);
 
@@ -62,10 +65,6 @@ body {
 
     --status: #121212;
     --status-base: #ababab;
-
-    /*Botones*/
-    --buttons:#11111184;
-    --buttons-hover:#7575757a;
 
     /*Hover*/
     --hover: #7575757a;

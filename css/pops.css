@@ -48,18 +48,20 @@
     display: flex;
     justify-content: center;
 
-    transform: translate(0, -50px);
+    transform: translate(0, -75px);
     pointer-events: none;
 
 }
 
 .Pop-bubble {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
 
     border-radius: 80px;
     background-color: var(--bg-pop);
     pointer-events: none;
+
+    border: 2px solid var(--white);
 }
 
 @media (max-width:780px) {
@@ -145,18 +147,14 @@
     padding: 0 25px 25px 25px;
     flex-direction: column;
     pointer-events: none;
-
     
 }
-
 
 .Pop-VS-Out, .Pop-Git-Out, .Pop-Fig-Out, .Pop-HTML-Out, .Pop-CSS-Out, .Pop-JS-Out, .Pop-PY-Out, .Pop-SQL-Out, .Pop-Fr-Out, .Pop-Office-Out{
     transform: translate(0,-50px);
     opacity: 1;
     pointer-events: all;
 }
-
-
 
 @media (max-width:780px) {
     .Pop-VS, .Pop-Git, .Pop-Fig, .Pop-HTML, .Pop-CSS, .Pop-JS, .Pop-PY, .Pop-SQL, .Pop-Fr, .Pop-Office {
@@ -173,6 +171,58 @@
     .Pop-VS-Out, .Pop-Git-Out, .Pop-Fig-Out, .Pop-HTML-Out, .Pop-CSS-Out, .Pop-JS-Out, .Pop-PY-Out, .Pop-SQL-Out, .Pop-Fr-Out, .Pop-Office-Out{
         transform: translate(0,0);
         opacity: 1;
+    }
+
+}
+
+.flex-full {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    position: fixed;
+
+    background-color: rgba(0, 0, 0, 0);
+
+    z-index: 5;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: auto;
+    margin-bottom: auto;
+
+    bottom: 0;
+
+    transform: translate(0,0);
+    opacity: 0;
+    transition: 0.175s ease-out;
+
+    pointer-events: none;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.Pop-Flex-Out {
+    transform: translate(0,0px);
+    opacity: 1;
+    pointer-events: none;
+}
+
+.Pop-Proyect {
+    width: 50vw;
+    height: 100vh;
+
+    background-color: #414141c0;
+    pointer-events: none;
+}
+
+@media (max-width:780px) {
+
+    .Pop-Proyect {
+        width: 100%;
+        height: auto;
     }
 
 }
