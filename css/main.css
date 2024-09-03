@@ -51,13 +51,14 @@ body {
     --header-on:#000000f7;
 
     /*Botones*/
-    --buttons:#11111184;
-    --buttons-hover:#7575757a;
+    --buttons:#111111;
+    --buttons-hover:#5b5b5b;
 
     /*Webkit Bar*/
-    --bg: #0d0d0d;
+    --bg: var(--background);
     --bar: #202020;
-    --bg-bar: var(--header-on);
+    --bg-bar: #050505;
+    --bar-hover: #b10000;
 
     /*Pop*/
     --bg-pop: #121212;
@@ -67,7 +68,7 @@ body {
     --status-base: #ababab;
 
     /*Hover*/
-    --hover: #7575757a;
+    --hover: #5b5b5b;
     --hover-bar: #ffffff;
 }
 
@@ -75,7 +76,7 @@ body::-webkit-scrollbar {width: 10px;   background: var(--bg);}
 body::-webkit-scrollbar-thumb {border: 0px solid var(--bg);   background: var(--bar);}
 body::-webkit-scrollbar-track {border-radius: 5px;      background: none;}
 body::-webkit-scrollbar:hover {background: var(--bg-bar);}
-body::-webkit-scrollbar:hover body::-webkit-scrollbar-thumb {border: 1px solid var(--bg-bar);}
+body::-webkit-scrollbar:hover body::-webkit-scrollbar-thumb {border: 1px solid var(--bar-hover);}
 
 @media (max-width:780px) {
     .scroll-frost {overflow: hidden;}

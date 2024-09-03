@@ -66,18 +66,13 @@ nav {
         height: 40px;
 
         border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0);
 
     }
 
-    .button-fever {
-        flex-direction: column;
-        gap: 4px;
-    }
+    .button-fever {flex-direction: column; gap: 4px;}
 
-    .button-scroll-on {
-        opacity: 1;
-        pointer-events: all;
-    }
+    .button-scroll-on {opacity: 1; pointer-events: all;}
 }
 
 .bur-1, .bur-2, .bur-3 {
@@ -91,18 +86,14 @@ nav {
 }
 
 .animate-bur-on {
-    animation: burbles 1.8s ease-out;
+    animation:burbles 1.4s cubic-bezier(0.6, -0.28, 0.74, 0.05);
 }
 
 .bur-1 { animation-delay: 250ms;}
-.bur-3 { animation-delay: 350ms;}
+.bur-3 { animation-delay: 500ms;}
 
 
 @keyframes burbles {
-    0% {width: 5px;}
-    20% {width: 20px;}
-    40% {width: 4px;}
-    60% {width: 5px;}
-    80% {width: 20px;}
+    0% {width: 4px;}    20% {width: 20px;}  40% {width: 4px;}   60% {width: 4px;}   80% {width: 20px;}
     100% {width: 4px;}
 }

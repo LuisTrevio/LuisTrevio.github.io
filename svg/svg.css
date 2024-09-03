@@ -10,6 +10,7 @@
     background-repeat: no-repeat;
 }
 
+.close-svg {background-image: url(maki_cross.svg);}
 
 .linkedin {background-image: url(mdi_linkedin.svg);}
 .twitter {background-image: url(ant-design_x-outlined.svg);}

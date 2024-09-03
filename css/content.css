@@ -139,7 +139,7 @@
 
     .perfil.size-fix.size-fix-on > .stock-perfil {padding: 47px 0 0 0;}
 
-    .dst-on {border: none;}
+    .dst-on {border: none; pointer-events: none;}
 }
 
 .info {
@@ -343,6 +343,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 
     background-color: var(--buttons);
     border: 2px solid var(--buttons);
+    color: var(--white);
 
     display: flex;
     justify-content: space-between;
@@ -438,6 +439,8 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    color: var(--white);
 }
 
 .img-proyect {

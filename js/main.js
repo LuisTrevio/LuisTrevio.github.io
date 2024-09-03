@@ -29,6 +29,7 @@ function Pop() {
     document.querySelectorAll('.Pop-Exit').forEach((result) => {result.classList.toggle('Pop-out');})
     document.querySelectorAll('.Status-Ani').forEach((result) => {result.classList.toggle('Status-Animated');})
     document.querySelectorAll('.scr-fr').forEach((result) => {result.classList.toggle('scroll-frost');})
+    document.querySelectorAll('.close-up').forEach((result) => {result.classList.toggle('Pop-Close-Up');})
 
     document.querySelectorAll('.Pop-VS-O').forEach((result) => {result.classList.remove('Pop-VS-Out')})
     document.querySelectorAll('.Pop-Git-O').forEach((result) => {result.classList.remove('Pop-Git-Out')})
