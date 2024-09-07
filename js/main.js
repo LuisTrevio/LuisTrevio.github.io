@@ -42,6 +42,7 @@ function Pop() {
     document.querySelectorAll('.Pop-Fr-O').forEach((result) => {result.classList.remove('Pop-Fr-Out')})
 
     document.querySelectorAll('.Pop-Office-O').forEach((result) => {result.classList.remove('Pop-Office-Out')})
+    document.querySelectorAll('.Pop-Mail-O').forEach((result) => {result.classList.remove('Pop-Mail-Out')})
 
     document.querySelectorAll('.Pop-Flex-O').forEach((result) => {result.classList.remove('Pop-Flex-Out')})
 }
@@ -56,6 +57,25 @@ function PopPY() {document.querySelectorAll('.Pop-PY-O').forEach((result) => {re
 function PopSQL() {document.querySelectorAll('.Pop-SQL-O').forEach((result) => {result.classList.add('Pop-SQL-Out')})}
 function PopFr() {document.querySelectorAll('.Pop-Fr-O').forEach((result) => {result.classList.add('Pop-Fr-Out')})}
 function PopOffice() {document.querySelectorAll('.Pop-Office-O').forEach((result) => {result.classList.add('Pop-Office-Out')})}
+function PopMail() {document.querySelectorAll('.Pop-Mail-O').forEach((result) => {result.classList.add('Pop-Mail-Out')})}
 
 
 function PopFlex() {document.querySelectorAll('.Pop-Flex-O').forEach((result) => {result.classList.add('Pop-Flex-Out')})}
+
+document.querySelectorAll(".email-button").forEach(CopyButton => {
+    CopyButton.addEventListener("click", () => {
+        const targetElement = document.querySelector(CopyButton.dataset.copy);
+        const Text2Copy = targetElement.textContent
+        .replace(/\s+/g, " ")
+        .trim();
+
+        navigator.clipboard.writeText(Text2Copy).then(() => {
+            document.querySelectorAll('.button-ar').forEach((result) => {result.classList.add('button-air')})
+            CopyButton.disable = true;
+            setTimeout (() => {
+            CopyButton.disable = false;
+            document.querySelectorAll('.button-ar').forEach((result) => {result.classList.remove('button-air')})
+            }, 2000); 
+        })
+    })
+})
