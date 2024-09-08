@@ -122,7 +122,7 @@
         animation-range: 0 170px;
     }
     @keyframes reveal-img {
-        0%{}
+        0%{z-index: 2;}
 
         80% {
             position: fixed;
