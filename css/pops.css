@@ -310,7 +310,6 @@
 }
 
 .email-button svg > path {transition: 0.2s ease-out;}
-
 .email-button:hover svg > path {stroke: rgb(146, 146, 146);}
 
 .button-air {
@@ -321,14 +320,18 @@
 }
 
 .button-air::before {
-    content: 'Copiado';
-    width: fit-content;
+    content: 'Copiado 📝 ';
+    width: 108px;
     height: 30px;
 
     background: black;
     color: white;
 
-    padding: 5px 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2px 10px;
 
     border-radius: 10px;
 

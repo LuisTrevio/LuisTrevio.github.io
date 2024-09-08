@@ -11,15 +11,12 @@
 }
 
 *,::after,::before {box-sizing: border-box;}
+html,body {height: 100%; scrollbar-track-color: #b10000;}
 
-html,body {height: 100%;}
-
-::selection {background-color: var(--navi-blue);}
+::selection {background-color: var(--select-text);}
 
 input,button,textarea,select {font: inherit;}
-
 a {text-decoration: none;}
-
 button {border: none;}
 
 br {
@@ -30,8 +27,8 @@ br {
 
 body {
     /*Text & Nucleo*/
-    --navi-blue: #1a69e07c;
-    --white: #ffffff;
+    --select-text: #fb8a0a96;
+    --white: #e6e6e6;
     --black: #000000;
 
     /*Background*/
@@ -51,7 +48,7 @@ body {
     --header-on:#000000f7;
 
     /*Botones*/
-    --buttons:#111111;
+    --buttons:#151414;
     --buttons-hover:#5b5b5b;
 
     /*Webkit Bar*/

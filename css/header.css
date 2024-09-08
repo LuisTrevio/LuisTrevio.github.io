@@ -39,12 +39,26 @@ nav {
     header, nav {
         display: flex;
         pointer-events: none;
+        animation: reveal linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0 170px;
     }
 
-    .active {
-        pointer-events: all;
-        background-color: var(--header-on);
-        backdrop-filter: blur(5px);
+    @keyframes reveal {
+        100% {
+            background-color: rgb(0, 0, 0);
+            pointer-events: all;
+            backdrop-filter: blur(5px);
+        }
+
+        80% {
+            backdrop-filter: blur(0px);
+        }
+
+        0% {
+            background-color: rgba(0, 0, 0, 0);
+            backdrop-filter: blur(0px);
+        }
     }
 
     .content {

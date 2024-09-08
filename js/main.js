@@ -1,9 +1,6 @@
 let LastScrollY = 170
 window.addEventListener("scroll", () => {
     if(LastScrollY < window.scrollY) {
-        document.querySelectorAll('.scroll').forEach((result) => { result.classList.add('active'); })
-        document.querySelectorAll('.nick-scroll').forEach((result) => { result.classList.add('nick-scroll-on');})
-        document.querySelectorAll('.img-scroll').forEach((result) => { result.classList.add('img-scroll-on');})
 
         document.querySelectorAll('.button-scroll').forEach((result) => { result.classList.add('button-scroll-on');})
 
@@ -12,10 +9,7 @@ window.addEventListener("scroll", () => {
 
         document.querySelectorAll('.animate').forEach((result) => { result.classList.add('animate-bur-on');})
     } else { 
-        document.querySelectorAll('.scroll').forEach((result) => { result.classList.remove('active');})
-        document.querySelectorAll('.nick-scroll').forEach((result) => { result.classList.remove('nick-scroll-on');})
-        document.querySelectorAll('.img-scroll').forEach((result) => { result.classList.remove('img-scroll-on');})
-    
+        
         document.querySelectorAll('.button-scroll').forEach((result) => { result.classList.remove('button-scroll-on');})
 
         document.querySelectorAll('.size-fix').forEach((result) => { result.classList.remove('size-fix-on');})
