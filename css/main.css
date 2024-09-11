@@ -50,6 +50,7 @@ body {
     /*Botones*/
     --buttons:#151414;
     --buttons-hover:#5b5b5b;
+    --buttons-pop:#060606;
 
     /*Webkit Bar*/
     --bg: var(--background);

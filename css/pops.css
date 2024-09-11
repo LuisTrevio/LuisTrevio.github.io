@@ -71,7 +71,7 @@
     z-index: 5;
 
     top: 0;
-    transform: translateY(-23px);
+    transform: translateY(-10px);
     opacity: 0;
     pointer-events: none;
 
@@ -79,7 +79,7 @@
     background-size: 50% 50%;
     background-repeat: no-repeat;
 
-    transition: 0.2s ease-out;
+    transition: 0.15s cubic-bezier(.4,0,.2,1);
 }
 
 .Pop-Close-Up {
@@ -165,20 +165,20 @@
     margin-top: auto;
     margin-bottom: auto;
 
-    background-color: var(--bg-pop);
     color: var(--white-dn);
 
     display: flex;
     position: fixed;
 
     bottom: 0;
-    border-radius: 30px 30px;
+    border-radius: 0px 0px;
 
     z-index: 5;
 
     transform: translate(0,0);
     opacity: 0;
-    transition: 0.175s ease-out;
+
+    transition: 0.157s cubic-bezier(.4,0,.2,1);
 
     padding: 0 25px 25px 25px;
     flex-direction: column;
@@ -204,13 +204,13 @@
     position: fixed;
 
     bottom: 0;
-    border-radius: 30px 30px;
+    border-radius: 0 0;
 
     z-index: 5;
 
     transform: translate(0,0);
     opacity: 0;
-    transition: 0.175s ease-out;
+    transition: 0.157s cubic-bezier(.4,0,.2,1);
 
     padding: 0 25px 25px 25px;
     flex-direction: column;
@@ -222,12 +222,18 @@
     transform: translate(0,-50px);
     opacity: 1;
     pointer-events: all;
+    
+    background-color: var(--bg-pop);
+    border-radius: 20px 20px;
 }
 
 .Pop-Mail-Out {
     transform: translate(0,-50px);
     opacity: 1;
     pointer-events: all;
+
+    background-color: var(--bg-pop);
+    border-radius: 20px 20px;
 }
 
 @media (max-width:780px) {
@@ -270,26 +276,45 @@
     height: 50px;
 
     margin-top: 20px;
-    background-color: #0000006e;
 
-    display: flex;
+    display: grid;
+
+    grid-template-columns: 1fr 50px;
     align-items: center;
     justify-content: space-between;
 
-    border-radius: 10px;
+    border-radius: 30px;
     text-decoration: none;
+
+    gap: 10px;
 }
 
 .email-text {
-    width: fit-content;
-    height: 50%;
+    width: 100%;
+    height: 100%;
 
-    padding: 5px 10px;
+    padding: 0 10px 0 10px;
 
     color: white;
+    background-color: var(--buttons-pop);
+    border: 2px solid var(--buttons-pop);
 
     font-family: "Helvetica", sans-serif;
     font-size: 15px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 30px;
+    transition: 0.2s ease-out;
+}
+
+.email-text:hover{background-color: var(--buttons-hover); border: 2px solid var(--white);}
+@media (max-width:780px) { 
+    .email-text:hover{background-color: var(--buttons-pop); background-color: var(--buttons-pop);}
+    .email-text:active{background-color: var(--buttons-hover); border: 2px solid var(--white);}
 }
 
 .email-button{
@@ -301,16 +326,23 @@
     justify-content: center;
     transition: 0.2s ease-out;
 
-    border-radius: 10px;
+    border-radius: 30px;
 
-    background-color: #00000000;
+    background-color: var(--buttons-pop);
+    border: 2px solid var(--buttons-pop);
+    
     pointer-events: all;
 
     cursor: pointer;
 }
 
+.email-button:hover{background-color: var(--buttons-hover); border: 2px solid var(--white);}
+@media (max-width:780px) { 
+    .email-button:hover{ background-color:none;border:none;}
+    .email-button:active{background-color: var(--buttons-hover); border: 2px solid var(--white);}
+}
+
 .email-button svg > path {transition: 0.2s ease-out;}
-.email-button:hover svg > path {stroke: rgb(146, 146, 146);}
 
 .button-air {
     background-color: rgb(183, 183, 183);
@@ -341,6 +373,8 @@
 
     transition: 0.2s ease-out;
 }
+
+.button-air svg > path {stroke: rgb(90, 90, 90);}
 
 .flex-full {
     width: 100vw;

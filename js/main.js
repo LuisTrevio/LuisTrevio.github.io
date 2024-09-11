@@ -39,6 +39,7 @@ function Pop() {
     document.querySelectorAll('.Pop-Mail-O').forEach((result) => {result.classList.remove('Pop-Mail-Out')})
 
     document.querySelectorAll('.Pop-Flex-O').forEach((result) => {result.classList.remove('Pop-Flex-Out')})
+    document.querySelectorAll('.Pop-Magic-O').forEach((result) => {result.classList.remove('Pop-Magic-Out')})
 }
 
 function PopVS() {document.querySelectorAll('.Pop-VS-O').forEach((result) => {result.classList.add('Pop-VS-Out')})}
@@ -55,6 +56,9 @@ function PopMail() {document.querySelectorAll('.Pop-Mail-O').forEach((result) =>
 
 
 function PopFlex() {document.querySelectorAll('.Pop-Flex-O').forEach((result) => {result.classList.add('Pop-Flex-Out')})}
+
+function PopMagic() {document.querySelectorAll('.Pop-Magic-O').forEach((result) => {result.classList.add('Pop-Magic-Out')})}
+
 
 document.querySelectorAll(".email-button").forEach(CopyButton => {
     CopyButton.addEventListener("click", () => {

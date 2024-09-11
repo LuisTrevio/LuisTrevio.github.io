@@ -30,7 +30,9 @@
 .js {background-image: url(js.svg);}
 .py {background-image: url(py.svg);}
 .sql {background-image: url(sql.svg);}
-.frame {background-image: url(frames.svg);}
+.frame {background-image: url(mdi_resource-description-framework.svg);}
+.astro {background-image: url(frames.svg);}
+.react {background-image: url(mdi_react.svg);}
 
 .proyect-waltz {background-image: url(-proyect-waltz.svg);}
 .proyect-techemet {background-image: url(-proyect-techmet.svg);}
