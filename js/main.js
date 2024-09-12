@@ -40,6 +40,8 @@ function Pop() {
 
     document.querySelectorAll('.Pop-Flex-O').forEach((result) => {result.classList.remove('Pop-Flex-Out')})
     document.querySelectorAll('.Pop-Magic-O').forEach((result) => {result.classList.remove('Pop-Magic-Out')})
+    document.querySelectorAll('.Pop-Waltz-O').forEach((result) => {result.classList.remove('Pop-Waltz-Out')})
+    document.querySelectorAll('.Pop-Tech-O').forEach((result) => {result.classList.remove('Pop-Tech-Out')})
 }
 
 function PopVS() {document.querySelectorAll('.Pop-VS-O').forEach((result) => {result.classList.add('Pop-VS-Out')})}
@@ -53,7 +55,8 @@ function PopSQL() {document.querySelectorAll('.Pop-SQL-O').forEach((result) => {
 function PopFr() {document.querySelectorAll('.Pop-Fr-O').forEach((result) => {result.classList.add('Pop-Fr-Out')})}
 function PopOffice() {document.querySelectorAll('.Pop-Office-O').forEach((result) => {result.classList.add('Pop-Office-Out')})}
 function PopMail() {document.querySelectorAll('.Pop-Mail-O').forEach((result) => {result.classList.add('Pop-Mail-Out')})}
-
+function PopWaltz() {document.querySelectorAll('.Pop-Waltz-O').forEach((result) => {result.classList.add('Pop-Waltz-Out')})}
+function PopTech() {document.querySelectorAll('.Pop-Tech-O').forEach((result) => {result.classList.add('Pop-Tech-Out')})}
 
 function PopFlex() {document.querySelectorAll('.Pop-Flex-O').forEach((result) => {result.classList.add('Pop-Flex-Out')})}
 

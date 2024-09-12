@@ -50,7 +50,10 @@ body {
     /*Botones*/
     --buttons:#151414;
     --buttons-hover:#5b5b5b;
+
     --buttons-pop:#060606;
+    --buttons-proyect:#4f4f4f;
+    --buttons-proyect-tech:#525d86;
 
     /*Webkit Bar*/
     --bg: var(--background);
@@ -79,4 +82,21 @@ body::-webkit-scrollbar:hover body::-webkit-scrollbar-thumb {border: 1px solid v
 @media (max-width:780px) {
     .scroll-frost {overflow: hidden;}
     ::-webkit-scrollbar {display: none;}
+}
+
+.reel-screenshots::-webkit-scrollbar {
+    height: 12px;
+    border-radius: 8px;
+    background: var(--bg);
+}
+
+.reel-screenshots::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 1px solid var(--bg);
+    background: var(--bar);
+}
+
+.reel-screenshots::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background: none;
 }
