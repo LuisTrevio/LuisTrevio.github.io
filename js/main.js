@@ -62,6 +62,28 @@ function PopFlex() {document.querySelectorAll('.Pop-Flex-O').forEach((result) =>
 
 function PopMagic() {document.querySelectorAll('.Pop-Magic-O').forEach((result) => {result.classList.add('Pop-Magic-Out')})}
 
+const rightButtons = Array.from(document.getElementsByClassName('slider-right'));
+const leftButtons = Array.from(document.getElementsByClassName('slider-left'));
+const containers = Array.from(document.getElementsByClassName('reel-screenshots'));
+
+let index = 0;
+for (const rightButton of rightButtons) {
+    const container = containers[index];
+    rightButton.addEventListener("click", function () {
+        container.scrollLeft += 150;
+    });
+    index++;
+}
+
+index = 0;
+for (const leftButton of leftButtons) {
+    const container = containers[index];
+    leftButton.addEventListener("click", function () {
+        container.scrollLeft -= 150;
+    });
+    index++;
+}
+
 
 document.querySelectorAll(".email-button").forEach(CopyButton => {
     CopyButton.addEventListener("click", () => {
@@ -80,3 +102,61 @@ document.querySelectorAll(".email-button").forEach(CopyButton => {
         })
     })
 })
+
+
+/* const rightButtons = Array.from(document.getElementsByClassName('button-right'));
+const leftButtons = Array.from(document.getElementsByClassName('button-left'));
+const containers = Array.from(document.getElementsByClassName('carrusel'));
+var state = 0;
+
+if (state == 0) {
+    document.querySelectorAll('.disable-bl').forEach((result) => {result.classList.add('disable-left');}) 
+} else {
+    document.querySelectorAll('.disable-bl').forEach((result) => {result.classList.remove('disable-left');}) 
+}
+if (state == 3) {
+    document.querySelectorAll('.disable-br').forEach((result) => {result.classList.add('disable-right');}) 
+} else {
+    document.querySelectorAll('.disable-br').forEach((result) => {result.classList.remove('disable-right');}) 
+}
+
+let index = 0;
+for (const rightButton of rightButtons) {
+    const container = containers[index];
+    rightButton.addEventListener("click", function () {
+        container.scrollLeft += 800;
+        state++;
+        if (state == 0) {
+            document.querySelectorAll('.disable-bl').forEach((result) => {result.classList.add('disable-left');}) 
+        } else {
+            document.querySelectorAll('.disable-bl').forEach((result) => {result.classList.remove('disable-left');}) 
+        }
+        if (state == 3) {
+            document.querySelectorAll('.disable-br').forEach((result) => {result.classList.add('disable-right');}) 
+        } else {
+            document.querySelectorAll('.disable-br').forEach((result) => {result.classList.remove('disable-right');}) 
+        }
+    });
+    index++;
+}
+
+index = 0;
+for (const leftButton of leftButtons) {
+    const container = containers[index];
+    leftButton.addEventListener("click", function () {
+        container.scrollLeft -= 800;
+        state--;
+        if (state == 0) {
+            document.querySelectorAll('.disable-bl').forEach((result) => {result.classList.add('disable-left');}) 
+        } else {
+            document.querySelectorAll('.disable-bl').forEach((result) => {result.classList.remove('disable-left');}) 
+        }
+        if (state == 3) {
+            document.querySelectorAll('.disable-br').forEach((result) => {result.classList.add('disable-right');}) 
+        } else {
+            document.querySelectorAll('.disable-br').forEach((result) => {result.classList.remove('disable-right');}) 
+        }
+    });
+    index++;
+}
+ */

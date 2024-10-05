@@ -68,7 +68,7 @@
     border-radius: 30px;
 
     position: fixed;
-    z-index: 5;
+    z-index: 6;
 
     top: 0;
     transform: translateY(-10px);
@@ -155,7 +155,7 @@
 @keyframes Status {0% { width: 0%;}    100% {}}
 
 .Pop-VS, .Pop-Git, .Pop-Fig, .Pop-HTML, .Pop-CSS, .Pop-JS, .Pop-PY, .Pop-SQL, .Pop-Fr, .Pop-Office{
-    width: 50vw;
+    width: 75ch;
     max-width: 720px;
     height: auto;
 
@@ -187,7 +187,7 @@
 }
 
 .Pop-Mail {
-    width: 50vw;
+    width: 75ch;
     max-width: 720px;
     height: auto;
 
@@ -330,8 +330,6 @@
 
     background-color: var(--buttons-pop);
     border: 2px solid var(--buttons-pop);
-    
-    pointer-events: all;
 
     cursor: pointer;
 }
@@ -420,7 +418,7 @@
 }
 
 .Pop-Waltz, .Pop-Tech {
-    width: 50vw;
+    width: 94ch;
     max-width: 1080px;
     height: fit-content;
 
@@ -473,7 +471,7 @@
         inset: auto;
         bottom: 0;
         border-radius: 35px 35px 0 0;
-        padding: 25px 25px 40px 25px;
+        padding: 25px 25px 25px 25px;
 
         transform: translate(0,300px);
     }
@@ -583,7 +581,7 @@
 }
 
 
-.reel-screenshots {
+.reel-screenshots{
     width: 100%;
     height: 130px;
 
@@ -597,7 +595,27 @@
     padding-bottom: 10px;
 
     overflow-x:auto;
+    scroll-behavior: smooth;
 }
+
+.slider-left, .slider-right {
+    width: 40px;
+    height: 40px;
+
+    position: fixed;
+    background-color: var(--buttons-proyect);
+
+    border-radius: 30px;
+    z-index: 6;
+    
+    left: 0;
+    bottom: 0;
+
+    transform: translateY(-80px);
+}
+
+.slider-right { left: auto;right: 0;bottom: 0;}
+@media (max-width:780px) { .slider-left, .slider-right {display: none;}}
 
 .screenshots {
     width: 200px;

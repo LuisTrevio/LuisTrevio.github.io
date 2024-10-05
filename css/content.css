@@ -251,7 +251,7 @@
 .burble-status:hover{background: var(--buttons-hover);border: 2px solid var(--white);}
 @media (max-width:780px) { 
     .burble-status {user-select: none;}
-    .burble-status:hover{background: var(--buttons);border: 2px solid var(--buttons-hover);}
+    .burble-status:hover{background: var(--buttons); border: 2px solid var(--buttons);}
     .burble-status:active{background: var(--buttons-hover);border: 2px solid var(--white);}
 }
 
@@ -370,8 +370,8 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 }
 
 @keyframes reveal-section {
-    from {opacity: 0.2;}
-    to {opacity: 1;}
+    100% {opacity: 1;}
+    0% {opacity: 0.25;}
 }
 
 .text-section {margin-top: 5px;}
