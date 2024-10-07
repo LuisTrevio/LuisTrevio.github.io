@@ -611,7 +611,15 @@
     border: 2px solid var(--buttons);
     transition: 0.2s ease-out;
     cursor: pointer;
+
+    display: flex;
+    align-items: flex-end;
+
+    font-size: 15px;
+    padding: 4px 6px;
 }
+
+.mini-proyect h2 {font-size: 18px;}
 
 .mini-proyect:hover{background-color: var(--buttons-hover); border: 2px solid var(--white);}
 @media (max-width:780px) { 
