@@ -474,7 +474,7 @@
         padding: 0;
 
         transform: translate(0,300px);
-        overflow: auto;
+        overflow: scroll;
 
         flex-wrap: wrap;
         flex-direction: row;
