@@ -19,6 +19,7 @@ window.addEventListener("scroll", () => {
     }
 })
 
+
 function Pop() {
     document.querySelectorAll('.Pop-Exit').forEach((result) => {result.classList.toggle('Pop-out');})
     document.querySelectorAll('.Status-Ani').forEach((result) => {result.classList.toggle('Status-Animated');})
