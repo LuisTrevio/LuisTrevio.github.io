@@ -43,6 +43,9 @@ function Pop() {
     document.querySelectorAll('.Pop-Magic-O').forEach((result) => {result.classList.remove('Pop-Magic-Out')})
     document.querySelectorAll('.Pop-Waltz-O').forEach((result) => {result.classList.remove('Pop-Waltz-Out')})
     document.querySelectorAll('.Pop-Tech-O').forEach((result) => {result.classList.remove('Pop-Tech-Out')})
+
+    document.querySelector('.Pop-Waltz').scrollTop = 0;
+    document.querySelector('.Pop-Tech').scrollTop = 0;
 }
 
 function PopVS() {document.querySelectorAll('.Pop-VS-O').forEach((result) => {result.classList.add('Pop-VS-Out')})}
