@@ -30,7 +30,6 @@ br {
     -moz-user-select: none;
 }
 
-
 body {
     -webkit-font-smoothing: antiliased;
 }
@@ -55,7 +54,7 @@ body {
 
     /*Header*/
     --header:#15151500;
-    --header-on:#000000f7;
+    --header-on:#070708;
 
     /*Botones*/
     --buttons:#151414;
@@ -81,6 +80,20 @@ body {
     /*Hover*/
     --hover: #5b5b5b;
     --hover-bar: #ffffff;
+
+    --shadow-select-color: 0deg 3% 4%;
+    --shadow-select-complex:
+      0.3px 0.5px 0.7px hsl(var(--shadow-select-color) / 0.36),
+      0.8px 1.6px 2px -0.8px hsl(var(--shadow-select-color) / 0.36),
+      2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-select-color) / 0.36),
+      5px 10px 12.6px -2.5px hsl(var(--shadow-select-color) / 0.36);
+
+    --shadow-header-color: 0deg 0% 0%;
+    --shadow-header-complex:
+    0px 0.5px 0.6px hsl(var(--shadow-header-color) / 0.36),
+    0px 1.5px 1.7px -0.8px hsl(var(--shadow-header-color) / 0.36),
+    -0.1px 3.8px 4.3px -1.7px hsl(var(--shadow-header-color) / 0.36),
+    -0.3px 9.2px 10.4px -2.5px hsl(var(--shadow-header-color) / 0.36);
 }
 
 body::-webkit-scrollbar {width: 10px;   background: var(--bg);}

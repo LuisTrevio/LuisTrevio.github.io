@@ -19,6 +19,18 @@ window.addEventListener("scroll", () => {
     }
 })
 
+function Dash() {
+    document.querySelectorAll('.menu-dash-up').forEach((result) => {result.classList.toggle('menu-up');})
+    document.querySelectorAll('.scr-fr').forEach((result) => {result.classList.toggle('scroll-frost');})
+
+    document.querySelectorAll('.bar-1').forEach((result) => {result.classList.toggle('bur-1-up');})
+    document.querySelectorAll('.bar-2').forEach((result) => {result.classList.toggle('bur-2-up');})
+    document.querySelectorAll('.bar-3').forEach((result) => {result.classList.toggle('bur-3-up');})
+
+    document.querySelectorAll('.box-up').forEach((result) => {result.classList.toggle('box-tool-up');})
+    document.querySelectorAll('.grid-up').forEach((result) => {result.classList.toggle('grid-tool-up');})
+    document.querySelectorAll('.select-up').forEach((result) => {result.classList.toggle('select-ani-up');})
+}
 
 function Pop() {
     document.querySelectorAll('.Pop-Exit').forEach((result) => {result.classList.toggle('Pop-out');})
@@ -120,61 +132,3 @@ document.querySelectorAll(".email-button").forEach(CopyButton => {
         })
     })
 })
-
-
-/* const rightButtons = Array.from(document.getElementsByClassName('button-right'));
-const leftButtons = Array.from(document.getElementsByClassName('button-left'));
-const containers = Array.from(document.getElementsByClassName('carrusel'));
-var state = 0;
-
-if (state == 0) {
-    document.querySelectorAll('.disable-bl').forEach((result) => {result.classList.add('disable-left');}) 
-} else {
-    document.querySelectorAll('.disable-bl').forEach((result) => {result.classList.remove('disable-left');}) 
-}
-if (state == 3) {
-    document.querySelectorAll('.disable-br').forEach((result) => {result.classList.add('disable-right');}) 
-} else {
-    document.querySelectorAll('.disable-br').forEach((result) => {result.classList.remove('disable-right');}) 
-}
-
-let index = 0;
-for (const rightButton of rightButtons) {
-    const container = containers[index];
-    rightButton.addEventListener("click", function () {
-        container.scrollLeft += 800;
-        state++;
-        if (state == 0) {
-            document.querySelectorAll('.disable-bl').forEach((result) => {result.classList.add('disable-left');}) 
-        } else {
-            document.querySelectorAll('.disable-bl').forEach((result) => {result.classList.remove('disable-left');}) 
-        }
-        if (state == 3) {
-            document.querySelectorAll('.disable-br').forEach((result) => {result.classList.add('disable-right');}) 
-        } else {
-            document.querySelectorAll('.disable-br').forEach((result) => {result.classList.remove('disable-right');}) 
-        }
-    });
-    index++;
-}
-
-index = 0;
-for (const leftButton of leftButtons) {
-    const container = containers[index];
-    leftButton.addEventListener("click", function () {
-        container.scrollLeft -= 800;
-        state--;
-        if (state == 0) {
-            document.querySelectorAll('.disable-bl').forEach((result) => {result.classList.add('disable-left');}) 
-        } else {
-            document.querySelectorAll('.disable-bl').forEach((result) => {result.classList.remove('disable-left');}) 
-        }
-        if (state == 3) {
-            document.querySelectorAll('.disable-br').forEach((result) => {result.classList.add('disable-right');}) 
-        } else {
-            document.querySelectorAll('.disable-br').forEach((result) => {result.classList.remove('disable-right');}) 
-        }
-    });
-    index++;
-}
- */
