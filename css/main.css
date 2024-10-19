@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@897&display=swap');
+/*  font-family: "Montserrat", sans-serif;  */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+/* font-family: "Inter", sans-serif; Textos en Detalle*/
+
+* {
+    margin: 0;
+    padding: 0;
+
+    scroll-behavior: smooth;
+}
+
+*,::after,::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,body {height: 100%; }
+
+::selection {background-color: var(--select-text);}
+
+input,button,textarea,select {font: inherit;}
+a {text-decoration: none;}
+button {border: none;}
+
+br {
+    -webkit-user-select: none;
+    user-select: none;
+    -moz-user-select: none;
+}
+
+body {
+    -webkit-font-smoothing: antiliased;
+}
+
+body {
+    /*Text & Nucleo*/
+    --select-text: #fb8a0a96;
+    --white: #e6e6e6;
+    --black: #000000;
+
+    /*Background*/
+    background: var(--background);
+    --background: #070707;
+    --stock-perfil:#19191b;
+    --border-stock-perfil: #ffffff53;
+
+    /*Background
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    */
+
+    /*Header*/
+    --header:#15151500;
+    --header-on:#070708;
+
+    /*Botones*/
+    --buttons:#151414;
+    --buttons-hover:#5b5b5b;
+
+    --buttons-pop:#060606;
+    --buttons-proyect:#212121;
+    --buttons-proyect-tech:#1f284d;
+
+    /*Webkit Bar*/
+    --bg: var(--background);
+    --bar: #202020;
+    --bg-bar: #050505;
+    --bar-hover: #b10000;
+
+    /*Pop*/
+    --bg-pop: #121212;
+    --white-dn:var(--white);
+
+    --status: #121212;
+    --status-base: #ababab;
+
+    /*Hover*/
+    --hover: #5b5b5b;
+    --hover-bar: #ffffff;
+
+    --shadow-select-color: 0deg 3% 4%;
+    --shadow-select-complex:
+      0.3px 0.5px 0.7px hsl(var(--shadow-select-color) / 0.36),
+      0.8px 1.6px 2px -0.8px hsl(var(--shadow-select-color) / 0.36),
+      2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-select-color) / 0.36),
+      5px 10px 12.6px -2.5px hsl(var(--shadow-select-color) / 0.36);
+
+    --shadow-header-color: 0deg 0% 0%;
+    --shadow-header-complex:
+    0px 0.5px 0.6px hsl(var(--shadow-header-color) / 0.36),
+    0px 1.5px 1.7px -0.8px hsl(var(--shadow-header-color) / 0.36),
+    -0.1px 3.8px 4.3px -1.7px hsl(var(--shadow-header-color) / 0.36),
+    -0.3px 9.2px 10.4px -2.5px hsl(var(--shadow-header-color) / 0.36);
+}
+
+body::-webkit-scrollbar {width: 10px;   background: var(--bg);}
+body::-webkit-scrollbar-thumb {border: 0px solid var(--bg);   background: var(--bar);}
+body::-webkit-scrollbar-track {border-radius: 5px;      background: none;}
+body::-webkit-scrollbar:hover {background: var(--bg-bar);}
+body::-webkit-scrollbar:hover body::-webkit-scrollbar-thumb {border: 1px solid var(--bar-hover);}
+
+@media (max-width:780px) {
+    .scroll-frost {overflow: hidden;}
+    ::-webkit-scrollbar {display: none;}
+}
+
+.reel-screenshots::-webkit-scrollbar {
+    height: 11px;
+    border-radius: 8px;
+    background: var(--bg);
+}
+
+.reel-screenshots::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 1px solid var(--bg);
+    background: var(--bar);
+}
+
+.reel-screenshots::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background: none;
+}

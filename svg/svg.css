@@ -1,0 +1,40 @@
+.icons {
+    background-position: center;
+    background-size: 100% 60%;
+    background-repeat: no-repeat;
+}
+
+.profile {
+    background-image: url(profile.jfif);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.close-svg {background-image: url(maki_cross.svg);}
+
+.linkedin {background-image: url(mdi_linkedin.svg);}
+.twitter {background-image: url(ant-design_x-outlined.svg);}
+.twitter2 {background-image: url(mdi_twitter.svg);}
+.email {background-image: url(clarity_email-solid.svg);}
+
+.factory {background-image: url(material-symbols_factory.svg);}
+.copy {background-image: url(ph_copyright-bold.svg);}
+.user {background-image: url(bxs_user.svg);}
+
+.vslogo {background-image: url(vscode.svg);}
+.fig {background-image: url(fig.svg);}
+.office {background-image: url(hugeicons_office-365.svg);}
+.gh {background-image: url(gh.svg);}
+.html {background-image: url(html.svg);}
+.css {background-image: url(css3.svg);}
+.js {background-image: url(js.svg);}
+.py {background-image: url(py.svg);}
+.sql {background-image: url(sql.svg);}
+.frame {background-image: url(mdi_resource-description-framework.svg);}
+.astro {background-image: url(frames.svg);}
+.react {background-image: url(mdi_react.svg);}
+
+.proyect-waltz {background-image: url(-proyect-waltz.svg);}
+.proyect-techemet {background-image: url(-proyect-techmet.svg);}
+
+.enter-svg {background-image: url(iconamoon_enter-bold.svg);}
