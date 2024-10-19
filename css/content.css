@@ -90,6 +90,11 @@
     border-radius: 90px;
 }
 
+.height-name {
+    width: 100%;
+    height: 60px;
+}
+
 .nickname {
     width: 100%;
     height: 60px;
@@ -196,8 +201,6 @@
     @keyframes reveal-nick-h1 {
         0% {} 100% {font-size: 15px;}
     }
-
-    .perfil.size-fix.size-fix-on > .stock-perfil {padding: 47px 0 0 0;}
 
     .border-icon {
         animation: reveal-border linear both;

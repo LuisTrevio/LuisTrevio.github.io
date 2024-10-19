@@ -3,16 +3,12 @@ window.addEventListener("scroll", () => {
     if(LastScrollY < window.scrollY) {
 
         document.querySelectorAll('.button-scroll').forEach((result) => { result.classList.add('button-scroll-on');})
-
-        document.querySelectorAll('.size-fix').forEach((result) => { result.classList.add('size-fix-on');})
         document.querySelectorAll('.dst').forEach((result) => { result.classList.add('dst-on');})
 
         document.querySelectorAll('.animate').forEach((result) => { result.classList.add('animate-bur-on');})
     } else { 
         
         document.querySelectorAll('.button-scroll').forEach((result) => { result.classList.remove('button-scroll-on');})
-
-        document.querySelectorAll('.size-fix').forEach((result) => { result.classList.remove('size-fix-on');})
         document.querySelectorAll('.dst').forEach((result) => { result.classList.remove('dst-on');})
     
         document.querySelectorAll('.animate').forEach((result) => { result.classList.remove('animate-bur-on');})
@@ -89,7 +85,6 @@ function Ommit() {
     document.querySelectorAll('.Pop-Fr-O').forEach((result) => {result.classList.remove('Pop-Fr-Out')})
     document.querySelectorAll('.Pop-As-O').forEach((result) => {result.classList.remove('Pop-Astro-Out')})
 }
-
 
 
 function PopFlex() {document.querySelectorAll('.Pop-Flex-O').forEach((result) => {result.classList.add('Pop-Flex-Out')})}
