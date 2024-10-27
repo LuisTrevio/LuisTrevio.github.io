@@ -433,7 +433,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 
     flex-direction: column;
 
-    border-radius: 10px;
+    border-radius: 22px;
     transition: 0.2s ease-out;
     cursor: pointer;
     padding: 5px;
@@ -469,7 +469,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 
 .items-name {
     width: 100%;
-    height: 30px;
+    height: 34px;
     text-align: center;
 }
 
@@ -490,7 +490,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     width: 100%;
     height: 180px;
 
-    border-radius: 10px;
+    border-radius: 22px;
 
     background-size: cover;
     background-position: center;
