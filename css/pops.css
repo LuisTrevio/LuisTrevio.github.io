@@ -184,6 +184,7 @@
     flex-direction: column;
     pointer-events: none;
     
+    box-shadow: none;
 }
 
 .Pop-Mail, .Pop-As {
@@ -216,6 +217,7 @@
     flex-direction: column;
     pointer-events: none;
     
+    box-shadow: none;
 }
 
 .Pop-VS-Out, .Pop-Git-Out, .Pop-Fig-Out, .Pop-HTML-Out, .Pop-CSS-Out, .Pop-JS-Out, .Pop-PY-Out, .Pop-SQL-Out, .Pop-Fr-Out, .Pop-Office-Out{
@@ -225,6 +227,7 @@
     
     background-color: var(--bg-pop);
     border-radius: 20px 20px;
+    box-shadow: var( --shadow-header-complex);
 }
 
 .Pop-Astro-Out {
@@ -234,6 +237,7 @@
 
     background-color: var(--bg-pop);
     border-radius: 20px 20px;
+    box-shadow: var( --shadow-header-complex);
 }
 
 .Pop-Mail-Out {
@@ -243,6 +247,7 @@
 
     background-color: var(--bg-pop);
     border-radius: 20px 20px;
+    box-shadow: var( --shadow-header-complex);
 }
 
 @media (max-width:780px) {
@@ -282,16 +287,19 @@
     .Pop-VS-Out, .Pop-Git-Out, .Pop-Fig-Out, .Pop-HTML-Out, .Pop-CSS-Out, .Pop-JS-Out, .Pop-PY-Out, .Pop-SQL-Out, .Pop-Fr-Out, .Pop-Office-Out{
         transform: translate(0,0);
         opacity: 1;
+        box-shadow: none;
     }
 
     .Pop-Mail-Out {
         transform: translate(0,0);
         opacity: 1;
+        box-shadow: none;
     }
 
     .Pop-Astro-Out {
         transform: translate(0,0);
         opacity: 1;
+        box-shadow: none;
     }
 
 }
@@ -468,6 +476,8 @@
     padding: 25px 25px 25px 25px;
     flex-direction: column;
     pointer-events: none;
+
+    box-shadow: var( --shadow-header-complex);
 }
 
 .Waltz {
@@ -485,7 +495,7 @@
     opacity: 1;
     pointer-events: all;
     
-    border-radius: 20px 20px;
+    border-radius: 35px 35px;
 }
 
 @media (max-width:780px) {
@@ -573,7 +583,7 @@
 
 .buttons-role {
     width: 100%;
-    height: 40px;
+    height: 50px;
 
     display: flex;
 
@@ -581,7 +591,7 @@
     justify-content: flex-start;
 
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 12px;
     margin-bottom: 20px;
 
 }
@@ -603,11 +613,11 @@
 
 .link-page {
     width: fit-content;
-    height: 40px;
+    height: 50px;
 
     display: flex;
     align-items: center;
-    padding: 10px 12px;
+    padding: 10px 16px;
 
     font-family: "Inter", sans-serif;
     font-size: 14px;
@@ -629,8 +639,8 @@
 }
 
 .link-github {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 
     border-radius: 30px;
     
