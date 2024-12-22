@@ -104,6 +104,8 @@
 
     border: 2px solid var(--white);
 }
+.icon-left {justify-content: flex-start;}
+.icon-left .Pop-bubble {border-radius: 10px;}
 
 @media (max-width:780px) {
     .Pop-icon { 
@@ -115,6 +117,8 @@
         width: 100px;
         height: 100px;
     }
+
+    .icon-left {justify-content: center;}
 }
 
 .Ability {
@@ -481,12 +485,12 @@
 }
 
 .Waltz {
-    background-color: #151515;
+    background: #151515;
     color: var(--white-dn);
 }
 
 .Techemet{
-    background-color: #08102f;
+    background: #08102f;
     color: var(--white-dn);
 }
 

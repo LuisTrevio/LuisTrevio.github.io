@@ -13,82 +13,96 @@ window.addEventListener("scroll", () => {
     
         document.querySelectorAll('.animate').forEach((result) => { result.classList.remove('animate-bur-on');})
     }
-})
+})//Empieza a contar el scroll y activa las animaciones en el menú
 
+//Menu en Dispositivos Móviles
 function Dash() {
-    document.querySelectorAll('.menu-dash-up').forEach((result) => {result.classList.toggle('menu-up');})
-    document.querySelectorAll('.scr-fr').forEach((result) => {result.classList.toggle('scroll-frost');})
+    const toggleClasses = [
+        ['.menu-dash-up', 'menu-up'],
+        ['.scr-fr', 'scroll-frost'],
+        ['.bar-1', 'bur-1-up'],
+        ['.bar-2', 'bur-2-up'],
+        ['.bar-3', 'bur-3-up'],
+        ['.box-up', 'box-tool-up'],
+        ['.grid-up', 'grid-tool-up'],
+        ['.select-up', 'select-ani-up']
+    ];
 
-    document.querySelectorAll('.bar-1').forEach((result) => {result.classList.toggle('bur-1-up');})
-    document.querySelectorAll('.bar-2').forEach((result) => {result.classList.toggle('bur-2-up');})
-    document.querySelectorAll('.bar-3').forEach((result) => {result.classList.toggle('bur-3-up');})
-
-    document.querySelectorAll('.box-up').forEach((result) => {result.classList.toggle('box-tool-up');})
-    document.querySelectorAll('.grid-up').forEach((result) => {result.classList.toggle('grid-tool-up');})
-    document.querySelectorAll('.select-up').forEach((result) => {result.classList.toggle('select-ani-up');})
+    toggleClasses.forEach(([selector, className]) => {
+        document.querySelectorAll(selector).forEach(result => result.classList.toggle(className));
+    });
 }
 
+//PopUp o Ventana Modal
 function Pop() {
-    document.querySelectorAll('.Pop-Exit').forEach((result) => {result.classList.toggle('Pop-out');})
-    document.querySelectorAll('.Status-Ani').forEach((result) => {result.classList.toggle('Status-Animated');})
-    document.querySelectorAll('.scr-fr').forEach((result) => {result.classList.toggle('scroll-frost');})
-    document.querySelectorAll('.close-up').forEach((result) => {result.classList.toggle('Pop-Close-Up');})
+    const toggleClasses = [
+        ['.Pop-Exit', 'Pop-out'],
+        ['.Status-Ani', 'Status-Animated'],
+        ['.scr-fr', 'scroll-frost'],
+        ['.close-up', 'Pop-Close-Up']
+    ];
 
-    document.querySelectorAll('.Pop-VS-O').forEach((result) => {result.classList.remove('Pop-VS-Out')})
-    document.querySelectorAll('.Pop-Git-O').forEach((result) => {result.classList.remove('Pop-Git-Out')})
-    document.querySelectorAll('.Pop-Fig-O').forEach((result) => {result.classList.remove('Pop-Fig-Out')})
-    document.querySelectorAll('.Pop-HTML-O').forEach((result) => {result.classList.remove('Pop-HTML-Out')})
-    document.querySelectorAll('.Pop-CSS-O').forEach((result) => {result.classList.remove('Pop-CSS-Out')})
-    document.querySelectorAll('.Pop-JS-O').forEach((result) => {result.classList.remove('Pop-JS-Out')})
-    document.querySelectorAll('.Pop-PY-O').forEach((result) => {result.classList.remove('Pop-PY-Out')})
-    document.querySelectorAll('.Pop-SQL-O').forEach((result) => {result.classList.remove('Pop-SQL-Out')})
-    document.querySelectorAll('.Pop-Fr-O').forEach((result) => {result.classList.remove('Pop-Fr-Out')})
-    document.querySelectorAll('.Pop-As-O').forEach((result) => {result.classList.remove('Pop-Astro-Out')})
+    toggleClasses.forEach(([selector, className]) => {
+        document.querySelectorAll(selector).forEach(result => result.classList.toggle(className));
+    });
 
+    const classesToRemove = [
+        'Pop-VS-Out', 'Pop-Git-Out', 'Pop-Fig-Out', 'Pop-HTML-Out', 'Pop-CSS-Out',
+        'Pop-JS-Out', 'Pop-PY-Out', 'Pop-SQL-Out', 'Pop-Fr-Out', 'Pop-Astro-Out',
+        'Pop-Office-Out', 'Pop-Mail-Out', 'Pop-Flex-Out', 'Pop-Magic-Out', 'Pop-Waltz-Out', 'Pop-Tech-Out'
+    ];
 
-    document.querySelectorAll('.Pop-Office-O').forEach((result) => {result.classList.remove('Pop-Office-Out')})
-    document.querySelectorAll('.Pop-Mail-O').forEach((result) => {result.classList.remove('Pop-Mail-Out')})
-
-    document.querySelectorAll('.Pop-Flex-O').forEach((result) => {result.classList.remove('Pop-Flex-Out')})
-    document.querySelectorAll('.Pop-Magic-O').forEach((result) => {result.classList.remove('Pop-Magic-Out')})
-    document.querySelectorAll('.Pop-Waltz-O').forEach((result) => {result.classList.remove('Pop-Waltz-Out')})
-    document.querySelectorAll('.Pop-Tech-O').forEach((result) => {result.classList.remove('Pop-Tech-Out')})
+    classesToRemove.forEach(className => {
+        document.querySelectorAll(`.${className.replace('-Out', '-O')}`).forEach(result => {
+            result.classList.remove(className);
+        });
+    });
 
     document.querySelector('.Pop-Waltz').scrollTop = 0;
     document.querySelector('.Pop-Tech').scrollTop = 0;
 }
 
-function PopVS() {document.querySelectorAll('.Pop-VS-O').forEach((result) => {result.classList.add('Pop-VS-Out')})}
-function PopGit() {document.querySelectorAll('.Pop-Git-O').forEach((result) => {result.classList.add('Pop-Git-Out')})}
-function PopFig() {document.querySelectorAll('.Pop-Fig-O').forEach((result) => {result.classList.add('Pop-Fig-Out')})}
-function PopHTML() {document.querySelectorAll('.Pop-HTML-O').forEach((result) => {result.classList.add('Pop-HTML-Out')})}
-function PopCSS() {document.querySelectorAll('.Pop-CSS-O').forEach((result) => {result.classList.add('Pop-CSS-Out')})}
-function PopJS() {document.querySelectorAll('.Pop-JS-O').forEach((result) => {result.classList.add('Pop-JS-Out')})}
-function PopPY() {document.querySelectorAll('.Pop-PY-O').forEach((result) => {result.classList.add('Pop-PY-Out')})}
-function PopSQL() {document.querySelectorAll('.Pop-SQL-O').forEach((result) => {result.classList.add('Pop-SQL-Out')})}
-function PopFr() {document.querySelectorAll('.Pop-Fr-O').forEach((result) => {result.classList.add('Pop-Fr-Out')})}
-function PopAs() {document.querySelectorAll('.Pop-As-O').forEach((result) => {result.classList.add('Pop-Astro-Out')})}
-function PopOffice() {document.querySelectorAll('.Pop-Office-O').forEach((result) => {result.classList.add('Pop-Office-Out')})}
-function PopMail() {document.querySelectorAll('.Pop-Mail-O').forEach((result) => {result.classList.add('Pop-Mail-Out')})}
-function PopWaltz() {document.querySelectorAll('.Pop-Waltz-O').forEach((result) => {result.classList.add('Pop-Waltz-Out')})}
-function PopTech() {document.querySelectorAll('.Pop-Tech-O').forEach((result) => {result.classList.add('Pop-Tech-Out')})}
+//PopUp de las Habilidades
+const popFunctions = [
+    ['PopVS', 'Pop-VS-O', 'Pop-VS-Out'],
+    ['PopGit', 'Pop-Git-O', 'Pop-Git-Out'],
+    ['PopFig', 'Pop-Fig-O', 'Pop-Fig-Out'],
+    ['PopHTML', 'Pop-HTML-O', 'Pop-HTML-Out'],
+    ['PopCSS', 'Pop-CSS-O', 'Pop-CSS-Out'],
+    ['PopJS', 'Pop-JS-O', 'Pop-JS-Out'],
+    ['PopPY', 'Pop-PY-O', 'Pop-PY-Out'],
+    ['PopSQL', 'Pop-SQL-O', 'Pop-SQL-Out'],
+    ['PopFr', 'Pop-Fr-O', 'Pop-Fr-Out'],
+    ['PopAs', 'Pop-As-O', 'Pop-Astro-Out'],
+    ['PopOffice', 'Pop-Office-O', 'Pop-Office-Out'],
+    ['PopMail', 'Pop-Mail-O', 'Pop-Mail-Out'],
+    ['PopWaltz', 'Pop-Waltz-O', 'Pop-Waltz-Out'],
+    ['PopTech', 'Pop-Tech-O', 'Pop-Tech-Out']
+];
 
+popFunctions.forEach(([funcName, selector, className]) => {
+    window[funcName] = () => {
+        document.querySelectorAll(`.${selector}`).forEach(result => {
+            result.classList.add(className);
+        });
+    };
+});
+
+//PopUp de las Habilidades
 function Ommit() {
-    document.querySelectorAll('.Pop-VS-O').forEach((result) => {result.classList.remove('Pop-VS-Out')})
-    document.querySelectorAll('.Pop-Git-O').forEach((result) => {result.classList.remove('Pop-Git-Out')})
-    document.querySelectorAll('.Pop-Fig-O').forEach((result) => {result.classList.remove('Pop-Fig-Out')})
-    document.querySelectorAll('.Pop-HTML-O').forEach((result) => {result.classList.remove('Pop-HTML-Out')})
-    document.querySelectorAll('.Pop-CSS-O').forEach((result) => {result.classList.remove('Pop-CSS-Out')})
-    document.querySelectorAll('.Pop-JS-O').forEach((result) => {result.classList.remove('Pop-JS-Out')})
-    document.querySelectorAll('.Pop-PY-O').forEach((result) => {result.classList.remove('Pop-PY-Out')})
-    document.querySelectorAll('.Pop-SQL-O').forEach((result) => {result.classList.remove('Pop-SQL-Out')})
-    document.querySelectorAll('.Pop-Fr-O').forEach((result) => {result.classList.remove('Pop-Fr-Out')})
-    document.querySelectorAll('.Pop-As-O').forEach((result) => {result.classList.remove('Pop-Astro-Out')})
+    const classesToRemove = [
+        'Pop-VS-Out', 'Pop-Git-Out', 'Pop-Fig-Out', 'Pop-HTML-Out', 'Pop-CSS-Out',
+        'Pop-JS-Out', 'Pop-PY-Out', 'Pop-SQL-Out', 'Pop-Fr-Out', 'Pop-Astro-Out'
+    ];
+
+    classesToRemove.forEach(className => {
+        document.querySelectorAll(`.${className.replace('-Out', '-O')}`).forEach(result => {
+            result.classList.remove(className);
+        });
+    });
 }
 
-
 function PopFlex() {document.querySelectorAll('.Pop-Flex-O').forEach((result) => {result.classList.add('Pop-Flex-Out')})}
-
 function PopMagic() {document.querySelectorAll('.Pop-Magic-O').forEach((result) => {result.classList.add('Pop-Magic-Out')})}
 
 const rightButtons = Array.from(document.getElementsByClassName('slider-right'));

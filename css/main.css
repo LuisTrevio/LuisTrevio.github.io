@@ -94,7 +94,46 @@ body {
     0px 1.5px 1.7px -0.8px hsl(var(--shadow-header-color) / 0.36),
     -0.1px 3.8px 4.3px -1.7px hsl(var(--shadow-header-color) / 0.36),
     -0.3px 9.2px 10.4px -2.5px hsl(var(--shadow-header-color) / 0.36);
+
+    --shadow-color-orange: 17deg 100% 28%;
+    --shadow-elevation-orange:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color-orange) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color-orange) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color-orange) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color-orange) / 0.36);
 }
+
+.gradient {
+    background-image: linear-gradient(
+      45deg,
+      hsl(16deg 88% 25%) 0%,
+      hsl(16deg 90% 30%) 8%,
+      hsl(16deg 92% 34%) 17%,
+      hsl(16deg 94% 38%) 25%,
+      hsl(16deg 96% 42%) 33%,
+      hsl(16deg 98% 46%) 42%,
+      hsl(16deg 100% 50%) 50%,
+      hsl(16deg 99% 48%) 58%,
+      hsl(16deg 98% 46%) 67%,
+      hsl(16deg 97% 44%) 75%,
+      hsl(16deg 96% 42%) 83%,
+      hsl(16deg 95% 40%) 92%,
+      hsl(16deg 94% 38%) 100%
+    );
+
+    animation: scrollx 7s linear infinite;
+    background-size: 300% 300%;
+    
+  }
+
+    @keyframes scrollx {
+        0% {
+        background-position: 0% 0%;
+        }
+        100% {
+        background-position: 100% 100%;
+        }  
+    }
 
 body::-webkit-scrollbar {width: 10px;   background: var(--bg);}
 body::-webkit-scrollbar-thumb {border: 0px solid var(--bg);   background: var(--bar);}
