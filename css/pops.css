@@ -104,6 +104,11 @@
 
     border: 2px solid var(--white);
 }
+
+.bg-pop-tech {
+    background-color: var(--buttons-proyect-tech);
+}
+
 .icon-left {justify-content: flex-start;}
 .icon-left .Pop-bubble {border-radius: 10px;}
 
@@ -641,6 +646,7 @@
 .link-tech {
     background-color: var(--buttons-proyect-tech);
     border: 2px solid var(--buttons-proyect-tech);
+    background-size: 100% 100%;
 }
 
 .link-github {
