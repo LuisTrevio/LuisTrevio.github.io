@@ -234,7 +234,7 @@
     box-shadow: var( --shadow-header-complex);
 }
 
-.Pop-Astro-Out {
+.Pop-As-Out {
     transform: translate(0,-50px);
     opacity: 1;
     pointer-events: all;
@@ -300,7 +300,7 @@
         box-shadow: none;
     }
 
-    .Pop-Astro-Out {
+    .Pop-As-Out {
         transform: translate(0,0);
         opacity: 1;
         box-shadow: none;
@@ -635,6 +635,7 @@
 .link-waltz {
     background-color: var(--buttons-proyect);
     border: 2px solid var(--buttons-proyect);
+    background-size: 100% 100%;
 }
 
 .link-tech {
@@ -747,10 +748,16 @@
     bottom: 0;
 
     transform: translateY(-80px);
+    transition: 0.3s ease-out;
 }
 
 .slider-right { left: auto;right: 0;bottom: 0;}
 @media (max-width:780px) { .slider-left, .slider-right {display: none;}}
+
+
+.icon-o-right, .icon-o-left {
+    opacity: 0;
+}
 
 .screenshots {
     width: 200px;

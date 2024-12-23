@@ -38,3 +38,36 @@
 .proyect-techemet {background-image: url(-proyect-techmet.svg);}
 
 .enter-svg {background-image: url(iconamoon_enter-bold.svg);}
+
+.wt-1 {background-image: url(waltz-sc1.webp);}
+.wt-2 {background-image: url(waltz-sc2.webp);}
+.wt-3 {background-image: url(waltz-sc3.webp);}
+.wt-4 {background-image: url(waltz-sc4.webp);}
+
+.waltz-icon {
+    background-image: url(waltz-icon.svg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.tech-icon {
+    background-image: url(tech-icon.svg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.icon-left {
+    background-image: url(left.svg);
+    background-position: center;
+    background-size: 100% 60%;
+    background-repeat: no-repeat;
+}
+
+.icon-right {
+    background-image: url(right.svg);
+    background-position: center;
+    background-size: 100% 60%;
+    background-repeat: no-repeat;
+}

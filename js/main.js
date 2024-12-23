@@ -15,6 +15,17 @@ window.addEventListener("scroll", () => {
     }
 })//Empieza a contar el scroll y activa las animaciones en el menú
 
+//cuando se desplaza hacia abajo, el menu se ateunúa
+let LastScrollY2 = 0
+window.addEventListener("scroll", () => {
+    if(LastScrollY2 < window.scrollY) {
+        document.querySelectorAll('.alert-dunot').forEach((result) => { result.classList.add('alert-donot');})
+    }
+    else {
+        document.querySelectorAll('.alert-dunot').forEach((result) => { result.classList.remove('alert-donot');})
+    }
+})
+
 //Menu en Dispositivos Móviles
 function Dash() {
     const toggleClasses = [
@@ -48,7 +59,7 @@ function Pop() {
 
     const classesToRemove = [
         'Pop-VS-Out', 'Pop-Git-Out', 'Pop-Fig-Out', 'Pop-HTML-Out', 'Pop-CSS-Out',
-        'Pop-JS-Out', 'Pop-PY-Out', 'Pop-SQL-Out', 'Pop-Fr-Out', 'Pop-Astro-Out',
+        'Pop-JS-Out', 'Pop-PY-Out', 'Pop-SQL-Out', 'Pop-Fr-Out', 'Pop-As-Out',
         'Pop-Office-Out', 'Pop-Mail-Out', 'Pop-Flex-Out', 'Pop-Magic-Out', 'Pop-Waltz-Out', 'Pop-Tech-Out'
     ];
 
@@ -73,7 +84,7 @@ const popFunctions = [
     ['PopPY', 'Pop-PY-O', 'Pop-PY-Out'],
     ['PopSQL', 'Pop-SQL-O', 'Pop-SQL-Out'],
     ['PopFr', 'Pop-Fr-O', 'Pop-Fr-Out'],
-    ['PopAs', 'Pop-As-O', 'Pop-Astro-Out'],
+    ['PopAs', 'Pop-As-O', 'Pop-As-Out'],
     ['PopOffice', 'Pop-Office-O', 'Pop-Office-Out'],
     ['PopMail', 'Pop-Mail-O', 'Pop-Mail-Out'],
     ['PopWaltz', 'Pop-Waltz-O', 'Pop-Waltz-Out'],
@@ -92,7 +103,7 @@ popFunctions.forEach(([funcName, selector, className]) => {
 function Ommit() {
     const classesToRemove = [
         'Pop-VS-Out', 'Pop-Git-Out', 'Pop-Fig-Out', 'Pop-HTML-Out', 'Pop-CSS-Out',
-        'Pop-JS-Out', 'Pop-PY-Out', 'Pop-SQL-Out', 'Pop-Fr-Out', 'Pop-Astro-Out'
+        'Pop-JS-Out', 'Pop-PY-Out', 'Pop-SQL-Out', 'Pop-Fr-Out', 'Pop-As-Out'
     ];
 
     classesToRemove.forEach(className => {
@@ -125,8 +136,41 @@ for (const leftButton of leftButtons) {
         container.scrollLeft -= 150;
     });
     index++;
+    
 }
 
+containers.forEach(container => {
+    const leftButton = container.previousElementSibling;
+    leftButton.disabled = true;
+    leftButton.classList.add('icon-o-left');
+});
+
+
+containers.forEach(container => {
+    container.addEventListener("scroll", function () {
+        const rightButton = container.nextElementSibling;
+        if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+            rightButton.disabled = true;
+            rightButton.classList.add('icon-o-right');
+        } else {
+            rightButton.disabled = false;
+            rightButton.classList.remove('icon-o-right');
+        }
+    });
+});
+
+containers.forEach(container => {
+    container.addEventListener("scroll", function () {
+        const leftButton = container.previousElementSibling;
+        if (container.scrollLeft === 0) {
+            leftButton.disabled = true;
+            leftButton.classList.add('icon-o-left');
+        } else {
+            leftButton.disabled = false;
+            leftButton.classList.remove('icon-o-left');
+        }
+    });
+});
 
 document.querySelectorAll(".email-button").forEach(CopyButton => {
     CopyButton.addEventListener("click", () => {

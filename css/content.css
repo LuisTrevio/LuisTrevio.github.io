@@ -393,6 +393,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     user-select: none;
 
     box-shadow: var(--shadow-elevation-complex);
+    transition: 0.4s ease-out;
 }
 
 @media (max-width:472px)  {
@@ -413,6 +414,8 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     z-index: 2;
 }
 
+.alert-donot {opacity: 0.6;}
+
 @keyframes close {
     0% {height: 0; opacity: 0;}
     10% {height: 50px; opacity: 1;}
@@ -426,9 +429,9 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
         z-index: 1;
     }
 
-    .square-orange {
-        border-radius: 60px;
-    }
+    .square-orange {border-radius: 60px;}
+
+    .alert-donot {opacity: 1;}
 }
 
 .division {
