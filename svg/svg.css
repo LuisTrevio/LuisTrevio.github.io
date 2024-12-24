@@ -63,14 +63,14 @@
     background-repeat: no-repeat;
 }
 
-.icon-left {
+.icon-left-svg {
     background-image: url(left.svg);
     background-position: center;
     background-size: 100% 60%;
     background-repeat: no-repeat;
 }
 
-.icon-right {
+.icon-right-svg {
     background-image: url(right.svg);
     background-position: center;
     background-size: 100% 60%;
