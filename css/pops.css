@@ -770,7 +770,12 @@
     height: 100%;
 
     border-radius: 10px;
+    transition: 0.2s ease-out;
 }
+
+.screenshots:hover{border: 2px solid var(--buttons-hover);}
+@media (max-width:780px) { .screenshots:hover{border: 2px solid var(--buttons);}}
+
 
 @media (max-width:780px) { 
     .reel-screenshots {
@@ -781,6 +786,27 @@
 
     .screenshots {
         width: 100%;
-        height: 180px;
+        height: 25ch;
     }
+}
+
+.Pop-img {
+    width: 100%;
+    height: 100%;
+
+    background-color: black;
+    display: flex;
+    position: fixed;
+
+    z-index: 7;
+    transition: 0.2s ease-out;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+.Pop-img-out {
+    transform: translate(0,0);
+    opacity: 1;
+    pointer-events: all;
 }

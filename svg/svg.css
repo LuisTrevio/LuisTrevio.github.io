@@ -4,6 +4,12 @@
     background-repeat: no-repeat;
 }
 
+.icons-frame {
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
 .profile {
     background-image: url(profile.jfif);
     background-size: 100% 100%;
@@ -48,6 +54,35 @@
 .tch-2 {background-image: url(tech-sc2.webp);}
 .tch-3 {background-image: url(tech-sc3.webp);}
 .tch-4 {background-image: url(tech-sc4.webp);}
+
+.pizzalok {background-image: url(pizzaloklogo.png);}
+
+.icon-play {background-image: url(play.svg); animation: bounce2 0.27s ease-out;}
+.icon-pause {background-image: url(pause.svg); animation: bounce 0.27s ease-out;}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce2 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
 .waltz-icon {
     background-image: url(waltz-icon.svg);

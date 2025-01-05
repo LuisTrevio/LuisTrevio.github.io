@@ -36,7 +36,8 @@ function Dash() {
         ['.bar-3', 'bur-3-up'],
         ['.box-up', 'box-tool-up'],
         ['.grid-up', 'grid-tool-up'],
-        ['.select-up', 'select-ani-up']
+        ['.select-up', 'select-ani-up'],
+        ['.music-up', 'music-dash-up']
     ];
 
     toggleClasses.forEach(([selector, className]) => {
@@ -172,6 +173,7 @@ containers.forEach(container => {
     });
 });
 
+
 document.querySelectorAll(".email-button").forEach(CopyButton => {
     CopyButton.addEventListener("click", () => {
         const targetElement = document.querySelector(CopyButton.dataset.copy);
@@ -189,3 +191,52 @@ document.querySelectorAll(".email-button").forEach(CopyButton => {
         })
     })
 })
+
+const audio = new Audio('music/hamster.mp3');
+
+function Play() {
+    const toggleClasses = [
+        ['.Play', 'Play-Stop'],
+        ['.Stop', 'Stop-Play']
+    ];
+
+    toggleClasses.forEach(([selector, className]) => {
+        document.querySelectorAll(selector).forEach(result => result.classList.toggle(className));
+    });
+
+    if (audio.paused) {
+        audio.play();
+        document.querySelector('.music-progress-bar').style.animation = 'progress 3s linear infinite';
+        document.querySelectorAll('.Play-i').forEach((result) => {result.classList.add('icon-pause') , result.classList.remove('icon-play')})
+        document.querySelectorAll('.gradient-s').forEach((result) => {result.classList.remove('gradient-loading')})
+    } else {
+        audio.pause();
+        document.querySelector('.music-progress-bar').style.animation = 'none';
+        document.querySelectorAll('.Play-i').forEach((result) => {result.classList.remove('icon-pause'), result.classList.add('icon-play')}) 
+    }
+}
+
+audio.addEventListener('pause', () => {
+    document.querySelectorAll('.Play-i').forEach((result) => {result.classList.remove('icon-pause'), result.classList.add('icon-play')})
+    document.querySelectorAll('.gradient-s').forEach((result) => {result.classList.add('gradient-loading')})
+});
+
+const progress = document.querySelector('.music-progress-bar');
+const playerProgress = document.querySelector('.music-progress');
+
+function updateProgressBar() {
+    const { currentTime, duration } = audio;
+    const percentage = audio.currentTime / audio.duration * 100;
+    progress.style.width = `${percentage}%`;
+}
+
+function setProgressBar(e) {
+    const width = playerProgress.clientWidth;
+    const clickX = e.offsetX;
+    const duration = audio.duration;
+
+    audio.currentTime = (clickX / width) * duration;
+}
+
+playerProgress.addEventListener('click', setProgressBar);
+audio.addEventListener('timeupdate', updateProgressBar);

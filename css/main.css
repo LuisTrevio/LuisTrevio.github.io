@@ -135,6 +135,41 @@ body {
         }  
     }
 
+.gradient-loading {
+    background-image: linear-gradient(
+        90deg,
+        hsl(0deg 0% 47%) 0%,
+        hsl(344deg 0% 47%) 8%,
+        hsl(344deg 0% 47%) 17%,
+        hsl(0deg 0% 47%) 25%,
+        hsl(344deg 0% 57%) 33%,
+        hsl(344deg 0% 68%) 42%,
+        hsl(0deg 0% 79%) 50%,
+        hsl(344deg 0% 68%) 58%,
+        hsl(344deg 0% 57%) 67%,
+        hsl(0deg 0% 47%) 75%,
+        hsl(344deg 0% 47%) 83%,
+        hsl(344deg 0% 47%) 92%,
+        hsl(0deg 0% 47%) 100%
+      );
+    animation: loading 3s linear infinite;
+    background-size: 450% 300%;
+}
+
+@media screen and (max-width: 780px) {
+    .gradient {background-size: 200% 200%;}
+    .gradient-loading {background-size: 600% 200%;}
+}
+
+  @keyframes loading {
+      0% {
+      background-position: 0% 0%;
+      }
+      100% {
+      background-position: 100% 100%;
+      }  
+  }
+    
 body::-webkit-scrollbar {width: 10px;   background: var(--bg);}
 body::-webkit-scrollbar-thumb {border: 0px solid var(--bg);   background: var(--bar);}
 body::-webkit-scrollbar-track {border-radius: 5px;      background: none;}
