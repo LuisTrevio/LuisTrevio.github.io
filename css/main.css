@@ -152,7 +152,7 @@ body {
         hsl(344deg 0% 47%) 92%,
         hsl(0deg 0% 47%) 100%
       );
-    animation: loading 3s linear infinite;
+    animation: loading 3s linear infinite forwards;
     background-size: 450% 300%;
 }
 

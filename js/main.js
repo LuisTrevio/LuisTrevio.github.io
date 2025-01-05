@@ -100,7 +100,7 @@ popFunctions.forEach(([funcName, selector, className]) => {
     };
 });
 
-//PopUp de las Habilidades
+//PopUp de las Habilidades pero de Omitir
 function Ommit() {
     const classesToRemove = [
         'Pop-VS-Out', 'Pop-Git-Out', 'Pop-Fig-Out', 'Pop-HTML-Out', 'Pop-CSS-Out',
@@ -113,6 +113,12 @@ function Ommit() {
         });
     });
 }
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        Pop();
+    }
+});
 
 function PopFlex() {document.querySelectorAll('.Pop-Flex-O').forEach((result) => {result.classList.add('Pop-Flex-Out')})}
 function PopMagic() {document.querySelectorAll('.Pop-Magic-O').forEach((result) => {result.classList.add('Pop-Magic-Out')})}
