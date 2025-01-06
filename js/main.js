@@ -115,7 +115,7 @@ function Ommit() {
 }
 
 document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
+    if (event.key === 'Escape' && document.querySelector('.Pop-Exit.Pop-out')) {
         Pop();
     }
 });
@@ -222,13 +222,40 @@ function Play() {
     }
 }
 
+function Volume() {
+    document.querySelectorAll('.Volume-stop').forEach((result) => {result.classList.toggle('volume-colapse')});
+    document.querySelectorAll('.Volume-i').forEach((result) => {result.classList.toggle('volume-hover')});
+}
+
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.music')) {
+        document.querySelectorAll('.Volume-stop').forEach((result) => {result.classList.remove('volume-colapse')});
+        document.querySelectorAll('.Volume-i').forEach((result) => {result.classList.remove('volume-hover')});
+    }
+});
+
 audio.addEventListener('pause', () => {
     document.querySelectorAll('.Play-i').forEach((result) => {result.classList.remove('icon-pause'), result.classList.add('icon-play')})
     document.querySelectorAll('.gradient-s').forEach((result) => {result.classList.add('gradient-loading')})
 });
 
+audio.addEventListener('ended', () => {
+    document.querySelectorAll('.Play-i').forEach((result) => {result.classList.remove('icon-pause'), result.classList.add('icon-play')})
+    document.querySelector('.music-progress-bar').style.animation = 'none';
+});
+
 const progress = document.querySelector('.music-progress-bar');
 const playerProgress = document.querySelector('.music-progress');
+
+audio.addEventListener('timeupdate', () => {
+    const { currentTime, duration } = audio;
+    const minutes = Math.floor(currentTime / 60);
+    const seconds = Math.floor(currentTime % 60);
+    const minutesDuration = Math.floor(duration / 60);
+    const secondsDuration = Math.floor(duration % 60);
+    document.querySelector('.music-time').textContent = `${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+    document.querySelector('.music-duration').textContent = `${minutesDuration}:${secondsDuration < 10 ? '0' + secondsDuration : secondsDuration}`;
+});
 
 function updateProgressBar() {
     const { currentTime, duration } = audio;
@@ -244,5 +271,29 @@ function setProgressBar(e) {
     audio.currentTime = (clickX / width) * duration;
 }
 
+const volumeProgress = document.querySelector('.volume-progress-bar');
+const volumePlayerProgress = document.querySelector('.volume-progress');
+
+function updateVolumeProgressBar() {
+    const percentage = audio.volume * 100;
+    volumeProgress.style.width = `${percentage}%`;
+}
+
+function setVolumeProgressBar(e) {
+    const width = volumePlayerProgress.clientWidth;
+    const clickX = e.offsetX;
+    audio.volume = clickX / width;
+}
+
+audio.volume = 0.7;
+
+volumePlayerProgress.addEventListener('click', setVolumeProgressBar);
+audio.addEventListener('volumechange', updateVolumeProgressBar);
+
+
 playerProgress.addEventListener('click', setProgressBar);
 audio.addEventListener('timeupdate', updateProgressBar);
+
+function Back() {
+    audio.currentTime -= 10;
+}

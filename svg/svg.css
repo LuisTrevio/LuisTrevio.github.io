@@ -57,30 +57,32 @@
 
 .pizzalok {background-image: url(pizzaloklogo.png);}
 
-.icon-play {background-image: url(play.svg); animation: bounce2 0.27s ease-out;}
-.icon-pause {background-image: url(pause.svg); animation: bounce 0.27s ease-out;}
+.icon-play {background-image: url(play.svg); animation: bounce2 0.2s ease-out;}
+.icon-pause {background-image: url(pause.svg); animation: bounce 0.2s ease-out;}
+.icon-volume {background-image: url(volume.svg);}
+.icon-back {background-image: url(tenseconds.svg);}
 
 @keyframes bounce {
     0% {
-        transform: scale(1);
+        background-size: 100% 60%;
     }
     50% {
-        transform: scale(0.8);
+        background-size: 50% 20%;
     }
     100% {
-        transform: scale(1);
+        background-size: 100% 60%;
     }
 }
 
 @keyframes bounce2 {
     0% {
-        transform: scale(1);
+        background-size: 100% 60%;
     }
     50% {
-        transform: scale(0.8);
+        background-size: 70% 20%;
     }
     100% {
-        transform: scale(1);
+        background-size: 100% 60%;
     }
 }
 
