@@ -225,12 +225,16 @@ function Play() {
 function Volume() {
     document.querySelectorAll('.Volume-stop').forEach((result) => {result.classList.toggle('volume-colapse')});
     document.querySelectorAll('.Volume-i').forEach((result) => {result.classList.toggle('volume-hover')});
+    document.querySelectorAll('.expande-pad').forEach((result) => {result.classList.toggle('music-expande')});
+    document.querySelectorAll('.touch-volume').forEach((result) => {result.classList.toggle('volume-touch')});
 }
 
 document.addEventListener('click', function(event) {
     if (!event.target.closest('.music')) {
+        document.querySelectorAll('.touch-volume').forEach((result) => {result.classList.remove('volume-touch')});
         document.querySelectorAll('.Volume-stop').forEach((result) => {result.classList.remove('volume-colapse')});
         document.querySelectorAll('.Volume-i').forEach((result) => {result.classList.remove('volume-hover')});
+        document.querySelectorAll('.expande-pad').forEach((result) => {result.classList.remove('music-expande')});
     }
 });
 

@@ -502,6 +502,13 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     transition: 0.2s ease-out;
 }
 
+@media (max-width:780px) { 
+    .music-expande {
+        height: 180px;
+        padding-bottom: 20px;
+    }
+}
+
 .music-dash {
     width: 100%;
     height: 160px;
@@ -545,6 +552,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 
     padding: 10px;
 }
+
 
 .music-title {
     width: 100%;
@@ -671,6 +679,18 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     pointer-events: all;
 }
 
+@media (max-width:780px) { 
+    .volume-progress {
+        width: 85%;
+        transform: translate(0, 0);
+    }
+
+    .volume-colapse {
+        width: 85%;
+        transform: translate(0, 40px);
+    }
+}
+
 .volume-progress-bar {
     width: 100%;
     height: 10px;
@@ -678,8 +698,10 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     background-color: var(--buttons-hover);
     border-radius: 20px;
 
-    pointer-events:all;
+    pointer-events:none;
 }
+
+.volumen-touch{pointer-events: all;}
 
 .flex-items-dev {
     width: 100%;
