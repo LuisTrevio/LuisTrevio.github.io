@@ -374,7 +374,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 
 @keyframes reveal-section {
     100% {opacity: 1;}
-    0% {opacity: 0.25;}
+    0% {opacity: 0.35; }
 }
 
 .text-section {margin-top: 5px;}
@@ -385,7 +385,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 
     background-color: #ff4400;
     color: black;
-    border-radius: 20px;
+    border-radius: 60px;
 
     display: flex;
     justify-content: center;
@@ -414,11 +414,12 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     z-index: 2;
 }
 
-.alert-donot {opacity: 0.6;}
+.alert-donot { filter: opacity(0.8) blur(0.25px); }
 
 @keyframes close {
     0% {height: 0; opacity: 0;}
-    10% {height: 50px; opacity: 1;}
+    10% {height: 59px; opacity: 1;}
+    11% {height: 50px; opacity: 1;}
     97% {height: 50px; opacity: 1;}
     100% {height: 0; opacity: 0; display: none;}
 }
@@ -428,8 +429,6 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
         top: 90px;
         z-index: 1;
     }
-
-    .square-orange {border-radius: 60px;}
 
     .alert-donot {opacity: 1;}
 }
@@ -449,7 +448,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     border-radius: 20px;
 }
 
-.div-sup {
+.exp-frame-sup {
     width: 100%;
     height: auto;
 
@@ -504,41 +503,12 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 
 @media (max-width:780px) { 
     .music-expande {
-        height: 180px;
-        padding-bottom: 20px;
+        height: 185px;
+        padding-bottom: 25px;
     }
 }
 
-.music-dash {
-    width: 100%;
-    height: 160px;
-
-    display: flex;
-    position: fixed;
-
-    background-color: rgb(40, 40, 40);
-    z-index: 2;
-
-    top: 90px;
-
-    opacity: 0;
-    pointer-events: none;
-}
-
-.music-dash-up {
-    opacity: 1;
-    pointer-events: all;
-}
-
-.music-icon {
-    width: 90px;
-    height: 90px;
-
-    background-position: center;
-}
-
-
-.music-tool {
+.music-player-mp3 {
     width: 100%;
     height: 100%;
 
@@ -553,7 +523,6 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     padding: 10px;
 }
 
-
 .music-title {
     width: 100%;
     height: 30px;
@@ -566,7 +535,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     color: var(--white);
 }
 
-.div-inf {
+.music-tools {
     width: 100%;
     height: auto;
 
@@ -574,12 +543,15 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     gap: 10px;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 
     padding: 0 10px;
 }
 
+.music-time {width: 35px;}
+
 .buttons-div {
-    width: 100%;
+    width:fit-content;
     height: auto;
 
     display: flex;
@@ -603,10 +575,10 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     transition: 0.2s ease-out;
 }
 
-.music-progress:hover {background-color:#0d0d0d;}
+.music-progress:hover {background-color:#0d0d0d; padding: 3.5px;}
 @media (max-width:780px) { 
-    .music-progress:hover {background-color: var(--buttons);}
-    .music-progress:active {background-color: #0d0d0d;;}
+    .music-progress:hover {background-color: var(--buttons); padding: 5px;}
+    .music-progress:active {background-color: #0d0d0d; padding: 3.5px;}
 }
 
 .music-progress-bar {
@@ -615,7 +587,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 
     background-color: var(--buttons-hover);
     border-radius: 20px;
-    transition: 0.1s ease-out;
+    transition:78ms ease-out;
 }
 
 .music-play {
@@ -641,6 +613,8 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     background-color: var(--buttons-hover) !important;
 }
 
+.Volume-i {display: none;}
+
 .volume-progress {
     width: 80px;
     height: 20px;
@@ -648,17 +622,18 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     display: flex;
     align-items: center;
     position: absolute;
-    transform: translate(120px, 20px);
+    transform: translate(124px, 0);
     justify-content: flex-start;
 
+    background: rgb(41, 41, 41);
     border-radius: 20px;
 
     padding: 5px;
 
     transition: 0.2s ease-out;
 
-    opacity: 0;
-    pointer-events: none;
+    opacity: 1;
+    pointer-events: all;
 }
 
 .volume-colapse {
@@ -670,25 +645,12 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     justify-content: flex-start;
 
     border-radius: 20px;
-    transform: translate(120px, 0);
+    transform: translate(124px, 0);
 
     padding: 5px;
 
-    background: rgb(41, 41, 41);
     opacity: 1;
     pointer-events: all;
-}
-
-@media (max-width:780px) { 
-    .volume-progress {
-        width: 85%;
-        transform: translate(0, 0);
-    }
-
-    .volume-colapse {
-        width: 85%;
-        transform: translate(0, 40px);
-    }
 }
 
 .volume-progress-bar {
@@ -699,9 +661,34 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     border-radius: 20px;
 
     pointer-events:none;
+    transition: 67ms cubic-bezier(1, -0.82, 0, 2.11);
 }
 
+.volume-bar-none {pointer-events: none; opacity: 0; transition: 0.2s ease-out; transition-delay: 260ms;} 
+
 .volumen-touch{pointer-events: all;}
+
+@media (max-width:780px) { 
+    .Volume-i {display: flex;}
+    .Volume-m-i {display: none;}
+    .volume-progress {
+        width: 85%;
+        transform: translate(0, 37px);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .volume-colapse {
+        width: 85%;
+        transform: translate(0, 45px);
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .volume-bar-none {pointer-events: all; opacity: 1;}
+
+    .volume-progress-bar {transition: none;}
+}
 
 .flex-items-dev {
     width: 100%;

@@ -57,10 +57,19 @@
 
 .pizzalok {background-image: url(pizzaloklogo.png);}
 
+.music-icon {
+    width: 90px;
+    height: 90px;
+
+    background-position: center;
+}
+
 .icon-play {background-image: url(play.svg); animation: bounce2 0.2s ease-out;}
 .icon-pause {background-image: url(pause.svg); animation: bounce 0.2s ease-out;}
-.icon-volume {background-image: url(volume.svg);}
+.icon-volume {background-image: url(volume.svg); animation: bounce2 0.2s ease-out;}
 .icon-back {background-image: url(tenseconds.svg);}
+
+.Mute-Off { background-image: url(mute.svg); animation: bounce 0.2s ease-out;}
 
 @keyframes bounce {
     0% {
@@ -80,6 +89,21 @@
     }
     50% {
         background-size: 70% 20%;
+    }
+    100% {
+        background-size: 100% 60%;
+    }
+}
+
+.icon-back-ani {animation: reverse-se 0.2s ease-out;}
+
+@keyframes reverse-se {
+    0% {
+        background-size: 100% 60%;
+    }
+    50% {
+        background-size: 65% 60%;
+        background-position: left;
     }
     100% {
         background-size: 100% 60%;

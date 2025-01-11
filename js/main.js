@@ -279,7 +279,7 @@ const volumeProgress = document.querySelector('.volume-progress-bar');
 const volumePlayerProgress = document.querySelector('.volume-progress');
 
 function updateVolumeProgressBar() {
-    const percentage = audio.volume * 100;
+    const percentage = audio.muted ? 0 : audio.volume * 100;
     volumeProgress.style.width = `${percentage}%`;
 }
 
@@ -294,10 +294,54 @@ audio.volume = 0.7;
 volumePlayerProgress.addEventListener('click', setVolumeProgressBar);
 audio.addEventListener('volumechange', updateVolumeProgressBar);
 
-
 playerProgress.addEventListener('click', setProgressBar);
 audio.addEventListener('timeupdate', updateProgressBar);
 
 function Back() {
     audio.currentTime -= 10;
+    document.querySelectorAll('.back-ani').forEach((result) => {result.classList.add('icon-back-ani')});
+    setTimeout(() => {
+        document.querySelectorAll('.back-ani').forEach((result) => {result.classList.remove('icon-back-ani')});
+    }, 100);
 }
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') {
+        audio.currentTime -= 10;
+        document.querySelectorAll('.back-ani').forEach((result) => {result.classList.add('icon-back-ani')});
+    }
+
+    document.addEventListener('keyup', (event) => {
+        if (event.key === 'ArrowLeft') {
+            document.querySelectorAll('.back-ani').forEach((result) => {result.classList.remove('icon-back-ani')});
+        }
+    });
+});
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowRight') {
+        audio.currentTime += 10;
+        
+    }
+    document.addEventListener('keyup', (event) => {
+        if (event.key === 'ArrowRight') {
+        }
+    });
+});
+
+
+function Mute() {
+    audio.muted = !audio.muted;
+    document.querySelectorAll('.Mute').forEach((result) => {result.classList.toggle('Mute-Off')});
+    document.querySelectorAll('.byebye').forEach((result) => {result.classList.toggle('volume-bar-none')});
+    updateVolumeProgressBar();
+}
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'm') {
+        audio.muted = !audio.muted;
+        document.querySelectorAll('.Mute').forEach((result) => {result.classList.toggle('Mute-Off')});
+        document.querySelectorAll('.byebye').forEach((result) => {result.classList.toggle('volume-bar-none')});
+        updateVolumeProgressBar();
+    }
+});
