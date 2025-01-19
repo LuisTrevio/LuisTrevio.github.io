@@ -320,15 +320,12 @@ document.addEventListener('keydown', (event) => {
 
 document.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowRight') {
-        audio.currentTime += 10;
-        
+        audio.currentTime += 10;  
     }
     document.addEventListener('keyup', (event) => {
-        if (event.key === 'ArrowRight') {
-        }
+        if (event.key === 'ArrowRight') {}
     });
 });
-
 
 function Mute() {
     audio.muted = !audio.muted;
@@ -345,3 +342,10 @@ document.addEventListener('keydown', (event) => {
         updateVolumeProgressBar();
     }
 });
+
+function Stop() {
+    audio.pause();
+    audio.currentTime = 0;
+    document.querySelectorAll('.Play-i').forEach((result) => {result.classList.remove('icon-pause'), result.classList.add('icon-play')});
+    document.querySelector('.music-progress-bar').style.animation = 'none';
+}
