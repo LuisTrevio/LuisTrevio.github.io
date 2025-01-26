@@ -37,12 +37,29 @@ function Dash() {
         ['.box-up', 'box-tool-up'],
         ['.grid-up', 'grid-tool-up'],
         ['.select-up', 'select-ani-up'],
-        ['.music-up', 'music-dash-up']
+        ['.music-up', 'music-dash-up'],
+        ['.block-up', 'top-block-up']
     ];
 
     toggleClasses.forEach(([selector, className]) => {
         document.querySelectorAll(selector).forEach(result => result.classList.toggle(className));
     });
+
+    if(audio.paused) {
+        document.querySelectorAll('.bumper').forEach((result) => {result.classList.remove('bumper-menu')})
+    }  
+    else {
+        document.querySelectorAll('.bumper').forEach((result) => {result.classList.add('bumper-menu')})
+    }
+}
+
+//boton para ir al inicio de la página
+function Top() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+    document.querySelectorAll('.top-ani').forEach((result) => {result.classList.add('top-animated')});
+    setTimeout(() => {
+        document.querySelectorAll('.top-ani').forEach((result) => {result.classList.remove('top-animated')});
+    }, 100);
 }
 
 //PopUp o Ventana Modal
@@ -215,10 +232,12 @@ function Play() {
         document.querySelector('.music-progress-bar').style.animation = 'progress 3s linear infinite';
         document.querySelectorAll('.Play-i').forEach((result) => {result.classList.add('icon-pause') , result.classList.remove('icon-play')})
         document.querySelectorAll('.gradient-s').forEach((result) => {result.classList.remove('gradient-loading')})
+        document.querySelectorAll('.bumper').forEach((result) => {result.classList.add('bumper-menu')}) 
     } else {
         audio.pause();
         document.querySelector('.music-progress-bar').style.animation = 'none';
         document.querySelectorAll('.Play-i').forEach((result) => {result.classList.remove('icon-pause'), result.classList.add('icon-play')}) 
+  
     }
 }
 

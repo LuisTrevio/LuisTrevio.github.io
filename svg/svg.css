@@ -16,6 +16,8 @@
     background-repeat: no-repeat;
 }
 
+.up-svg {background-image: url(up.svg); background-size: 100% 100%;}
+
 .close-svg {background-image: url(maki_cross.svg);}
 
 .linkedin {background-image: url(mdi_linkedin.svg);}

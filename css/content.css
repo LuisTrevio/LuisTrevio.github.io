@@ -566,6 +566,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    background-color:rgb(16 16 16);
 
     border-radius: 20px;
 
@@ -575,7 +576,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 
 .music-progress:hover {background-color:#0d0d0d; padding: 3.5px;}
 @media (max-width:780px) { 
-    .music-progress:hover {background-color: var(--buttons); padding: 5px;}
+    .music-progress:hover {background-color: rgb(16 16 16); padding: 5px;}
     .music-progress:active {background-color: #0d0d0d; padding: 3.5px;}
 }
 
@@ -585,7 +586,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 
     background-color: var(--buttons-hover);
     border-radius: 20px;
-    transition:78ms ease-out;
+    transition:89ms ease-out;
 }
 
 .music-play {
@@ -659,7 +660,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     border-radius: 20px;
 
     pointer-events:none;
-    transition: 67ms cubic-bezier(1, -0.82, 0, 2.11);
+    transition: 89ms cubic-bezier(1, -0.82, 0, 2.11);
 }
 
 .volume-bar-none {pointer-events: none; opacity: 0; transition: 0.2s ease-out; transition-delay: 260ms;} 
@@ -682,8 +683,6 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
         opacity: 1;
         pointer-events: all;
     }
-
-    .volume-bar-none {pointer-events: all; opacity: 1;}
 
     .volume-progress-bar {transition: none;}
 }
