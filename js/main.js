@@ -82,7 +82,7 @@ function Pop() {
     const classesToRemove = [
         'Pop-VS-Out', 'Pop-Git-Out', 'Pop-Fig-Out', 'Pop-HTML-Out', 'Pop-CSS-Out',
         'Pop-JS-Out', 'Pop-PY-Out', 'Pop-SQL-Out', 'Pop-Fr-Out', 'Pop-As-Out',
-        'Pop-Office-Out', 'Pop-Mail-Out', 'Pop-Flex-Out', 'Pop-Magic-Out', 'Pop-Waltz-Out', 'Pop-Tech-Out'
+        'Pop-Office-Out', 'Pop-Mail-Out', 'Pop-Share-Out' ,'Pop-Flex-Out', 'Pop-Magic-Out', 'Pop-Waltz-Out', 'Pop-Tech-Out'
     ];
 
     classesToRemove.forEach(className => {
@@ -110,6 +110,7 @@ const popFunctions = [
     ['PopOffice', 'Pop-Office-O', 'Pop-Office-Out'],
     ['PopMail', 'Pop-Mail-O', 'Pop-Mail-Out'],
     ['PopWaltz', 'Pop-Waltz-O', 'Pop-Waltz-Out'],
+    ['PopShare', 'Pop-Share-O', 'Pop-Share-Out'],
     ['PopTech', 'Pop-Tech-O', 'Pop-Tech-Out']
 ];
 
@@ -125,7 +126,7 @@ popFunctions.forEach(([funcName, selector, className]) => {
 function Ommit() {
     const classesToRemove = [
         'Pop-VS-Out', 'Pop-Git-Out', 'Pop-Fig-Out', 'Pop-HTML-Out', 'Pop-CSS-Out',
-        'Pop-JS-Out', 'Pop-PY-Out', 'Pop-SQL-Out', 'Pop-Fr-Out', 'Pop-As-Out'
+        'Pop-JS-Out', 'Pop-PY-Out', 'Pop-SQL-Out', 'Pop-Fr-Out', 'Pop-As-Out', 'Pop-Share-Out',
     ];
 
     classesToRemove.forEach(className => {

@@ -24,6 +24,10 @@
 .twitter {background-image: url(ant-design_x-outlined.svg);}
 .twitter2 {background-image: url(mdi_twitter.svg);}
 .email {background-image: url(clarity_email-solid.svg);}
+.whatsapp {background-image: url(whatsapp.svg);}
+.facebook {background-image: url(facebook.svg);}
+.reddit {background-image: url(reddit.svg);}
+.telegram {background-image: url(telegram.svg);}
 
 .factory {background-image: url(material-symbols_factory.svg);}
 .copy {background-image: url(ph_copyright-bold.svg);}
@@ -58,6 +62,13 @@
 .tch-4 {background-image: url(tech-sc4.webp);}
 
 .pizzalok {background-image: url(pizzaloklogo.png);}
+
+.wallpaper {
+    background-image: url(../bg/background-publised.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 .music-icon {
     width: 90px;

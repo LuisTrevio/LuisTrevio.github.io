@@ -62,17 +62,17 @@
                     </svg> 
                     Revisar Github
                 </a>
-                <a onclick="Dash(), Top()" class="select-box select-up">
+                <a onclick="Dash(), Pop(), PopShare()" class="select-box select-up">
                     <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17 22C16.1667 22 15.4583 21.7083 14.875 21.125C14.2917 20.5417 14 19.8333 14 19C14 18.9 14.025 18.6667 14.075 18.3L7.05 14.2C6.78333 14.45 6.475 14.646 6.125 14.788C5.775 14.93 5.4 15.0007 5 15C4.16667 15 3.45833 14.7083 2.875 14.125C2.29167 13.5417 2 12.8333 2 12C2 11.1667 2.29167 10.4583 2.875 9.875C3.45833 9.29167 4.16667 9 5 9C5.4 9 5.775 9.071 6.125 9.213C6.475 9.355 6.78333 9.55067 7.05 9.8L14.075 5.7C14.0417 5.58333 14.021 5.471 14.013 5.363C14.005 5.255 14.0007 5.134 14 5C14 4.16667 14.2917 3.45833 14.875 2.875C15.4583 2.29167 16.1667 2 17 2C17.8333 2 18.5417 2.29167 19.125 2.875C19.7083 3.45833 20 4.16667 20 5C20 5.83333 19.7083 6.54167 19.125 7.125C18.5417 7.70833 17.8333 8 17 8C16.6 8 16.225 7.929 15.875 7.787C15.525 7.645 15.2167 7.44933 14.95 7.2L7.925 11.3C7.95833 11.4167 7.97933 11.5293 7.988 11.638C7.99667 11.7467 8.00067 11.8673 8 12C7.99933 12.1327 7.99533 12.2537 7.988 12.363C7.98067 12.4723 7.95967 12.5847 7.925 12.7L14.95 16.8C15.2167 16.55 15.525 16.3543 15.875 16.213C16.225 16.0717 16.6 16.0007 17 16C17.8333 16 18.5417 16.2917 19.125 16.875C19.7083 17.4583 20 18.1667 20 19C20 19.8333 19.7083 20.5417 19.125 21.125C18.5417 21.7083 17.8333 22 17 22Z" fill="white"/>
                     </svg>                        
                     Compartir Link
                 </a>
-                <a onclick="Dash(), Stop()" class="select-box select-up Stop-er">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 19C9.1 19 10 18.1 10 17V7C10 5.9 9.1 5 8 5C6.9 5 6 5.9 6 7V17C6 18.1 6.9 19 8 19ZM14 7V17C14 18.1 14.9 19 16 19C17.1 19 18 18.1 18 17V7C18 5.9 17.1 5 16 5C14.9 5 14 5.9 14 7Z" fill="white"/>
-                    </svg>                        
-                    Parar musica
+                <a onclick="Dash(), Top()" class="select-box select-up Stop-er">
+                    <svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 14.5L12 8.5L18 14.5H6Z" fill="white" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                    </svg>                                               
+                    Desplegar hacia arriba
                 </a>
                 <a onclick="Dash(), Top()" class="select-box select-up">
                     <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -525,6 +525,29 @@
                             <path d="M4.012 16.737C3.705 16.5626 3.44965 16.31 3.2719 16.0049C3.09415 15.6998 3.00034 15.3531 3 15V5C3 3.9 3.9 3 5 3H15C15.75 3 16.158 3.385 16.5 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>                                
                     </button>
+                </div>
+            </div>
+
+            <div class="Pop-Share Pop-Share-O">
+                <br>
+                <div class="Pop-center"><h2>Compartir Link</h2></div>
+                <div class="wallpaper"></div>
+                <div class="email-tump">
+                    <a href="https://luistrevio.github.io/" class="email-text2" >https://luistrevio.github.io/</a>
+                    <button class="email-button button-ar" data-copy=".email-text2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 9.667C7 8.95967 7.28099 8.28131 7.78115 7.78115C8.28131 7.28099 8.95967 7 9.667 7H18.333C18.6832 7 19.03 7.06898 19.3536 7.20301C19.6772 7.33704 19.9712 7.53349 20.2189 7.78115C20.4665 8.0288 20.663 8.32281 20.797 8.64638C20.931 8.96996 21 9.31676 21 9.667V18.333C21 18.6832 20.931 19.03 20.797 19.3536C20.663 19.6772 20.4665 19.9712 20.2189 20.2189C19.9712 20.4665 19.6772 20.663 19.3536 20.797C19.03 20.931 18.6832 21 18.333 21H9.667C9.31676 21 8.96996 20.931 8.64638 20.797C8.32281 20.663 8.0288 20.4665 7.78115 20.2189C7.53349 19.9712 7.33704 19.6772 7.20301 19.3536C7.06898 19.03 7 18.6832 7 18.333V9.667Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.012 16.737C3.705 16.5626 3.44965 16.31 3.2719 16.0049C3.09415 15.6998 3.00034 15.3531 3 15V5C3 3.9 3.9 3 5 3H15C15.75 3 16.158 3.385 16.5 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                                
+                    </button>
+                </div>
+                <div class="reels-socialmedia">
+                    <a href="https://twitter.com/intent/tweet?text=Visita%20mi%20pagina%20web%20https://luistrevio.github.io/" class="socialmedia icons twitter"></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://luistrevio.github.io/" class="socialmedia icons facebook"></a>
+                    <a href="https://api.whatsapp.com/send?text=Visita%20mi%20pagina%20web%20https://luistrevio.github.io/" class="socialmedia icons whatsapp"></a>
+                    <a href="https://www.reddit.com/submit?url=https://luistrevio.github.io/&title=Visita%20mi%20pagina%20web" class="socialmedia icons reddit"></a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://luistrevio.github.io/" class="socialmedia icons linkedin"></a>
+                    <a href="https://t.me/share/url?url=https://luistrevio.github.io/&text=Visita%20mi%20pagina%20web" class="socialmedia icons telegram"></a>
                 </div>
             </div>
 
