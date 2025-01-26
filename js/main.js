@@ -53,13 +53,17 @@ function Dash() {
     }
 }
 
-//boton para ir al inicio de la página
+//Menu de desplazamiento hacia arriba (Mobile)
 function Top() {
     window.scrollTo({top: 0, behavior: 'smooth'});
     document.querySelectorAll('.top-ani').forEach((result) => {result.classList.add('top-animated')});
+    document.querySelectorAll('.block-m').forEach((result) => {result.classList.add('block-menu')});
     setTimeout(() => {
         document.querySelectorAll('.top-ani').forEach((result) => {result.classList.remove('top-animated')});
     }, 100);
+    setTimeout(() => {
+        document.querySelectorAll('.block-m').forEach((result) => {result.classList.remove('block-menu')});
+    }, 1000);
 }
 
 //PopUp o Ventana Modal

@@ -130,6 +130,8 @@ nav {
         pointer-events: all;
     }
 
+    .block-menu {pointer-events: none;}
+
     .box-tool {
         width: 100%;
         height: auto;
