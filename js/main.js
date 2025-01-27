@@ -93,6 +93,7 @@ function Pop() {
 
     document.querySelector('.Pop-Waltz').scrollTop = 0;
     document.querySelector('.Pop-Tech').scrollTop = 0;
+    document.querySelector('.reels-socialmedia').scrollLeft = 20;
 }
 
 //PopUp de las Habilidades
@@ -136,6 +137,21 @@ function Ommit() {
     });
 }
 
+function Ommit2() {
+    const classesToRemove = [
+        'Pop-Waltz-Out', 'Pop-Tech-Out'
+    ];
+
+    classesToRemove.forEach(className => {
+        document.querySelectorAll(`.${className.replace('-Out', '-O')}`).forEach(result => {
+            result.classList.remove(className);
+        });
+    });
+
+    document.querySelector('.Pop-Waltz').scrollTop = 0;
+    document.querySelector('.Pop-Tech').scrollTop = 0;
+}
+
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && document.querySelector('.Pop-Exit.Pop-out')) {
         Pop();
@@ -165,7 +181,6 @@ for (const leftButton of leftButtons) {
         container.scrollLeft -= 150;
     });
     index++;
-    
 }
 
 containers.forEach(container => {
