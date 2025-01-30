@@ -633,7 +633,7 @@ a.socialmedia.icons.telegram:hover::before {transition: 0.2s ease-out; transform
 
 @media (max-width:780px) {
     .Pop-Waltz, .Pop-Tech{ 
-        width: 90vw;
+        width: 90%;
         height: 100%;
 
         inset: auto;
@@ -657,8 +657,8 @@ a.socialmedia.icons.telegram:hover::before {transition: 0.2s ease-out; transform
     }
 
     @keyframes reveal-pop {
-        0% {width: 90vw;}
-        100% {width: 100vw;}
+        0% {width: 90%;}
+        100% {width: 100%;}
     }
 
     .Pop-enge {
@@ -670,7 +670,8 @@ a.socialmedia.icons.telegram:hover::before {transition: 0.2s ease-out; transform
         background-color: #08102f;
 
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
     }
 
