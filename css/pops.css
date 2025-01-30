@@ -633,7 +633,7 @@ a.socialmedia.icons.telegram:hover::before {transition: 0.2s ease-out; transform
 
 @media (max-width:780px) {
     .Pop-Waltz, .Pop-Tech{ 
-        width: 100%;
+        width: 90vw;
         height: 100%;
 
         inset: auto;
@@ -646,11 +646,19 @@ a.socialmedia.icons.telegram:hover::before {transition: 0.2s ease-out; transform
 
         flex-wrap: wrap;
         flex-direction: row;
+        animation: reveal-pop linear both;
+        animation-timeline: scroll(self);
+        animation-range: 0 170px;
     }
 
     .Pop-Waltz-Out, .Pop-Tech-Out {
         transform: translate(0,0);
         opacity: 1;
+    }
+
+    @keyframes reveal-pop {
+        0% {width: 90vw;}
+        100% {width: 100vw;}
     }
 
     .Pop-enge {
@@ -660,6 +668,10 @@ a.socialmedia.icons.telegram:hover::before {transition: 0.2s ease-out; transform
         border-radius: 35px 35px 0 0;
         padding: 25px 25px 25px 25px;
         background-color: #08102f;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .click-here {
@@ -679,6 +691,26 @@ a.socialmedia.icons.telegram:hover::before {transition: 0.2s ease-out; transform
     .Techemet-m{
         background-color: #08102f;
         color: var(--white-dn);
+    }
+
+    .text-amount {
+        animation: reveal-txt linear both;
+        animation-timeline: scroll(nearest);
+        animation-range: 0 170px;
+    }
+    @keyframes reveal-txt {
+        0% {font-size: 14px;}
+        100% {font-size: 15px;}
+    }
+
+    .text-amount-h2 {
+        animation: reveal-txt-h2 linear both;
+        animation-timeline: scroll(nearest);
+        animation-range: 0 170px;
+    }
+    @keyframes reveal-txt-h2 {
+        0% {font-size: 32px;}
+        100% {font-size: 36px;}
     }
 }
 
@@ -752,6 +784,7 @@ a.socialmedia.icons.telegram:hover::before {transition: 0.2s ease-out; transform
 
     .center-text-mobile {
         text-align: center;
+        width: 37ch;
     }
 }
 
