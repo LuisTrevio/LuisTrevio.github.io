@@ -336,6 +336,22 @@ audio.addEventListener('volumechange', updateVolumeProgressBar);
 playerProgress.addEventListener('click', setProgressBar);
 audio.addEventListener('timeupdate', updateProgressBar);
 
+//la barra de volumen se puede arrastrar
+
+let volumeDragging = false;
+
+volumePlayerProgress.addEventListener('mousedown', () => {volumeDragging = true;});
+
+volumePlayerProgress.addEventListener('mousemove', (e) => {
+    if (volumeDragging) { setVolumeProgressBar(e); }
+});
+volumePlayerProgress.addEventListener('mouseup', () => {
+    if (volumeDragging) {volumeDragging = false;}
+});
+volumePlayerProgress.addEventListener('mouseleave', () => {
+    if (volumeDragging) {volumeDragging = false;}
+});
+
 function Back() {
     audio.currentTime -= 10;
     document.querySelectorAll('.back-ani').forEach((result) => {result.classList.add('icon-back-ani')});
@@ -370,7 +386,8 @@ function Mute() {
     audio.muted = !audio.muted;
     document.querySelectorAll('.Mute').forEach((result) => {result.classList.toggle('Mute-Off')});
     document.querySelectorAll('.byebye').forEach((result) => {result.classList.toggle('volume-bar-none')});
-    updateVolumeProgressBar();
+
+   updateVolumeProgressBar();
 }
 
 document.addEventListener('keydown', (event) => {

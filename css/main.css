@@ -36,15 +36,15 @@ body {
 
 body {
     /*Text & Nucleo*/
-    --select-text: #fb8a0a96;
+    --select-text: #66598c;
     --white: #e6e6e6;
     --black: #000000;
 
     /*Background*/
     background: var(--background);
-    --background: #070707;
-    --stock-perfil:#19191b;
-    --border-stock-perfil: #ffffff53;
+    --background: #201d1d;
+    --stock-perfil:#724a18;
+    --border-stock-perfil: #e2810b;
 
     /*Background
     background-position: center;
@@ -54,20 +54,27 @@ body {
 
     /*Header*/
     --header:#15151500;
-    --header-on:#070708;
+    --header-on:var(--background);
 
     /*Botones*/
-    --buttons:#151515;
-    --buttons-hover:#5b5b5b;
+    --buttons:#312f2f;
+    --buttons-stock:#5c390c;
+    --buttons-hover:#66598c;
+    --buttons-stock-hover:#af680f;
+    --solid-box: var(--buttons);
 
     --buttons-pop:#0d0d0d;
+
     --buttons-proyect:#2e2e2e;
+
+    --techemet-bg:#08102f;
+    --techemet-bg-bar:#05091b;
     --buttons-proyect-tech:#1f284d;
 
     /*Webkit Bar*/
     --bg: var(--background);
-    --bar: #202020;
-    --bg-bar: #050505;
+    --bar: #66598c;
+    --bg-bar: #2c212c;
     --bar-hover: #b10000;
 
     /*Pop*/
@@ -195,6 +202,18 @@ body::-webkit-scrollbar:hover body::-webkit-scrollbar-thumb {border: 1px solid v
     border-radius: 8px;
     border: 1px solid var(--bg);
     background: var(--bar);
+}
+
+.Techemet-m .reel-screenshots::-webkit-scrollbar {
+    height: 11px;
+    border-radius: 8px;
+    background: var(--techemet-bg-bar);
+}
+
+.Techemet-m .reel-screenshots::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 1px solid var(--techemet-bg-bar);
+    background: var(--buttons-proyect-tech);
 }
 
 .reel-screenshots::-webkit-scrollbar-track {

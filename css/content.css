@@ -53,6 +53,7 @@
 @media (max-width:780px) {
     .stock-perfil {
         height: 372px;
+        border-radius: 35px;
     }
 }
 
@@ -235,8 +236,8 @@
     margin: 2px;
 
     color: var(--white);
-    background: var(--buttons);
-    border: 2px solid var(--buttons);
+    background: var(--buttons-stock);
+    border: 2px solid var(--buttons-stock);
 
     font-family: "Inter", sans-serif;
 
@@ -251,11 +252,11 @@
     transition: 0.2s ease-out;
 }
 
-.burble-status:hover{background: var(--buttons-hover);border: 2px solid var(--white);}
+.burble-status:hover{background: var(--buttons-stock-hover);border: 2px solid var(--white);}
 @media (max-width:780px) { 
     .burble-status {user-select: none;}
-    .burble-status:hover{background: var(--buttons); border: 2px solid var(--buttons);}
-    .burble-status:active{background: var(--buttons-hover);border: 2px solid var(--white);}
+    .burble-status:hover{background: var(--buttons-stock); border: 2px solid var(--buttons-stock);}
+    .burble-status:active{background: var(--buttons-stock-hover);border: 2px solid var(--white);}
 }
 
 .border-d {
@@ -288,18 +289,18 @@
     width: 50px;
     height: 50px;
 
-    background-color: var(--buttons);
-    border: 2px solid var(--buttons);
+    background-color: var(--buttons-stock);
+    border: 2px solid var(--buttons-stock);
 
     border-radius: 30px;
     transition: 0.2s ease-out;
     cursor: pointer;
 }
 
-.sub:hover{background-color: var(--buttons-hover);  border: 2px solid var(--white);}
+.sub:hover{background-color: var(--buttons-stock-hover);  border: 2px solid var(--white);}
 @media (max-width:780px) { 
-    .sub:hover{background-color: var(--buttons);border: 2px solid var(--buttons);}
-    .sub:active{background-color: var(--buttons-hover);border: 2px solid var(--white);}
+    .sub:hover{background-color: var(--buttons-stock);border: 2px solid var(--buttons);}
+    .sub:active{background-color: var(--buttons-stock-hover);border: 2px solid var(--white);}
 }
 
 .download {
@@ -566,7 +567,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background-color:rgb(16 16 16);
+    background-color:#282626;
 
     border-radius: 20px;
 
@@ -576,7 +577,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 
 .music-progress:hover {background-color:#0d0d0d; padding: 3.5px;}
 @media (max-width:780px) { 
-    .music-progress:hover {background-color: rgb(16 16 16); padding: 5px;}
+    .music-progress:hover {background-color: #282626; padding: 5px;}
     .music-progress:active {background-color: #0d0d0d; padding: 3.5px;}
 }
 
@@ -615,19 +616,19 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 .Volume-i {display: none;}
 
 .volume-progress {
-    width: 80px;
-    height: 20px;
+    width: 100px;
+    height: 40px;
 
     display: flex;
     align-items: center;
     position: absolute;
-    transform: translate(124px, 0);
+    transform: translate(140px, 0);
     justify-content: flex-start;
 
-    background: rgb(41, 41, 41);
+    background: #282626;
     border-radius: 20px;
 
-    padding: 5px;
+    padding: 12px;
 
     transition: 0.2s ease-out;
 
@@ -660,7 +661,6 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     border-radius: 20px;
 
     pointer-events:none;
-    transition: 89ms cubic-bezier(1, -0.82, 0, 2.11);
 }
 
 .volume-bar-none {pointer-events: none; opacity: 0; transition: 0.2s ease-out; transition-delay: 260ms;} 
@@ -683,8 +683,6 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
         opacity: 1;
         pointer-events: all;
     }
-
-    .volume-progress-bar {transition: none;}
 }
 
 .flex-items-dev {

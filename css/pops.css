@@ -619,7 +619,7 @@ a.socialmedia.icons.telegram:hover::before {transition: 0.2s ease-out; transform
 }
 
 .Techemet{
-    background: #08102f;
+    background: var(--techemet-bg);
     color: var(--white-dn);
 }
 
@@ -673,6 +673,14 @@ a.socialmedia.icons.telegram:hover::before {transition: 0.2s ease-out; transform
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
+        animation: reveal-pop-enge linear both;
+        animation-timeline: scroll(nearest);
+        animation-range: 0 170px;
+    }
+
+    @keyframes reveal-pop-enge {
+        0% {padding: 10px 10px 10px 10px;}
+        100% {padding: 25px 25px 25px 25px;}
     }
 
     .click-here {
@@ -694,24 +702,11 @@ a.socialmedia.icons.telegram:hover::before {transition: 0.2s ease-out; transform
         color: var(--white-dn);
     }
 
-    .text-amount {
-        animation: reveal-txt linear both;
-        animation-timeline: scroll(nearest);
-        animation-range: 0 170px;
-    }
-    @keyframes reveal-txt {
-        0% {font-size: 14px;}
-        100% {font-size: 15px;}
-    }
+    .text-amount {font-size: 14px;}
 
     .text-amount-h2 {
-        animation: reveal-txt-h2 linear both;
-        animation-timeline: scroll(nearest);
-        animation-range: 0 170px;
-    }
-    @keyframes reveal-txt-h2 {
-        0% {font-size: 32px;}
-        100% {font-size: 36px;}
+        font-size: 32px;
+        margin-bottom: 1px;
     }
 }
 
@@ -785,7 +780,8 @@ a.socialmedia.icons.telegram:hover::before {transition: 0.2s ease-out; transform
 
     .center-text-mobile {
         text-align: center;
-        width: 37ch;
+        width: 40ch;
+        margin: auto;
     }
 }
 
@@ -923,8 +919,10 @@ a.socialmedia.icons.telegram:hover::before {transition: 0.2s ease-out; transform
     bottom: 0;
 
     transform: translateY(-80px);
-    transition: 0.3s ease-out;
+    transition: 0.2s ease-out;
 }
+
+.slider-left:hover, .slider-right:hover{background-color: var(--buttons-hover);}
 
 .slider-right { left: auto;right: 0;bottom: 0;}
 @media (max-width:780px) { .slider-left, .slider-right {display: none;}}
