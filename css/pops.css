@@ -649,6 +649,7 @@ a.socialmedia.icons.telegram:hover::before {transition: 0.2s ease-out; transform
         animation: reveal-pop linear both;
         animation-timeline: scroll(self);
         animation-range: 0 170px;
+        box-shadow: none;
     }
 
     .Pop-Waltz-Out, .Pop-Tech-Out {
@@ -676,6 +677,7 @@ a.socialmedia.icons.telegram:hover::before {transition: 0.2s ease-out; transform
         animation: reveal-pop-enge linear both;
         animation-timeline: scroll(nearest);
         animation-range: 0 170px;
+        
     }
 
     @keyframes reveal-pop-enge {
