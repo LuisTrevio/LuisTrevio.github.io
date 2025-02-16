@@ -624,10 +624,10 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     transition: 0.2s ease-out;
 }
 
-.music-progress:hover {background-color:#222222; padding: 4.1px;}
+.music-progress:hover {background-color:#222222; padding: 3px 4px;}
 @media (max-width:780px) { 
     .music-progress:hover {background-color:var(--music-progress); padding: 5px;}
-    .music-progress:active {background-color: #222222; padding: 4.1px;}
+    .music-progress:active {background-color: #222222; padding: 3px 4px;}
 }
 
 .music-progress-bar {
