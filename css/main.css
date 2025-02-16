@@ -35,13 +35,13 @@ body {
 }
 
 body {
+    background: var(--background);
     /*Text & Nucleo*/
     --select-text: #66598c;
     --white: #e6e6e6;
     --black: #000000;
 
     /*Background*/
-    background: var(--background);
     --background: #0B0A0A;
     --stock-perfil:#724a18;
     --border-stock-perfil: #e2810b;

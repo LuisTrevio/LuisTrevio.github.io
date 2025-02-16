@@ -17,24 +17,24 @@ window.addEventListener("scroll", () => {
 
 let LastScrollY3 = 170
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-    document.querySelectorAll('.safari').forEach((result) => { result.classList.add('sar-on');})
+    document.querySelectorAll('.sar-web').forEach((result) => { result.classList.add('sar-on');})
     document.querySelectorAll('.img-saf').forEach((result) => { result.classList.add('img-safari');})
    
     window.addEventListener("scroll", () => {
-    if(LastScrollY3 < window.scrollY) {
-        document.querySelectorAll('.animate-safari').forEach((result) => { result.classList.add('animate-safari-on');})
-        document.querySelectorAll('.name-safari').forEach((result) => { result.classList.add('name-safari-on');})
-        document.querySelectorAll('.header-safari').forEach((result) => { result.classList.add('header-saf-on');})
-        document.querySelectorAll('.h1-safari').forEach((result) => { result.classList.add('h1-saf-on');})
-    
-    } else { 
-        document.querySelectorAll('.animate-safari').forEach((result) => { result.classList.remove('animate-safari-on');})
-        document.querySelectorAll('.name-safari').forEach((result) => { result.classList.remove('name-safari-on');})
-        document.querySelectorAll('.header-safari').forEach((result) => { result.classList.remove('header-saf-on');})
-        document.querySelectorAll('.h1-safari').forEach((result) => { result.classList.remove('h1-saf-on');})
-    }
+        const toggleClasses = [
+            ['.animate-safari', 'animate-safari-on'],
+            ['.name-safari', 'name-safari-on'],
+            ['.header-safari', 'header-saf-on'],
+            ['.h1-safari', 'h1-saf-on']
+        ];
 
-})
+        toggleClasses.forEach(([selector, className]) => {
+            document.querySelectorAll(selector).forEach(result => {
+                result.classList.toggle(className, LastScrollY3 < window.scrollY);
+            });
+        });
+    });
+
 }
 
 let LastScrollY2 = 0
