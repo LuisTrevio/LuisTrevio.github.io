@@ -42,7 +42,7 @@ body {
 
     /*Background*/
     background: var(--background);
-    --background: #201d1d;
+    --background: #0B0A0A;
     --stock-perfil:#724a18;
     --border-stock-perfil: #e2810b;
 
@@ -57,13 +57,15 @@ body {
     --header-on:var(--background);
 
     /*Botones*/
-    --buttons:#312f2f;
+    --buttons:#292828;
     --buttons-stock:#5c390c;
     --buttons-hover:#66598c;
     --buttons-stock-hover:#af680f;
     --solid-box: var(--buttons);
 
     --buttons-pop:#0d0d0d;
+
+    --music-progress:#1f1e1e;
 
     --buttons-proyect:#2e2e2e;
 

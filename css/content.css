@@ -539,7 +539,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 
 @media (max-width:780px) { 
     .music-expande {
-        padding-bottom: 40px;
+        padding-bottom: 30px;
     }
 }
 
@@ -573,6 +573,8 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
 }
 
 @media (max-width:780px) {
+    .music-player-mp3 {padding: 19px;}
+
     .music-title {
         font-size: 14px;
         margin-bottom: 2px;
@@ -614,7 +616,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background-color:#282626;
+    background-color:var(--music-progress);
 
     border-radius: 20px;
 
@@ -622,10 +624,10 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     transition: 0.2s ease-out;
 }
 
-.music-progress:hover {background-color:#0d0d0d; padding: 3.5px;}
+.music-progress:hover {background-color:#222222; padding: 4.1px;}
 @media (max-width:780px) { 
-    .music-progress:hover {background-color: #282626; padding: 5px;}
-    .music-progress:active {background-color: #0d0d0d; padding: 3.5px;}
+    .music-progress:hover {background-color:var(--music-progress); padding: 5px;}
+    .music-progress:active {background-color: #222222; padding: 4.1px;}
 }
 
 .music-progress-bar {
@@ -672,7 +674,7 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     transform: translate(140px, 0);
     justify-content: flex-start;
 
-    background: #282626;
+    background-color:var(--music-progress);
     border-radius: 20px;
 
     padding: 12px;
@@ -720,14 +722,14 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     .Volume-i {display: flex;}
     .Volume-m-i {display: none;}
     .volume-progress {
-        width: 85%;
+        width: 75%;
         transform: translate(-2px, 37px);
         opacity: 0;
         pointer-events: none;
     }
 
     .volume-colapse {
-        width: 85%;
+        width: 79%;
         transform: translate(-2px, 45px);
         opacity: 1;
         pointer-events: all;
