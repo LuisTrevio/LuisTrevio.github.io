@@ -844,6 +844,8 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
     .id-proyect:active{background-color: var(--buttons-hover); border: 2px solid var(--white);}
 }
 
+
+
 .title-proyect {
     width: 100%;
     height: 24px;
@@ -871,8 +873,16 @@ h1 {font-size: 36px;} h2 { font-size: 24px;}
    }
 }
 
+.id-proyect:hover .title-proyect > .img-proyect {animation: slide-svg 0.3s ease-in-out;}
+
+@keyframes slide-svg {
+    0% {transform: translate(0,0);} 50% {transform: translate(-4px,0);} 100% {transform: translate(0,0);}
+}
+
 .property-text {
     color: #565656;
     font-size: 14px;
+
+    -webkit-user-select: none;
     user-select: none;
 }

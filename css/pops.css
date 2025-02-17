@@ -145,19 +145,22 @@
     border-radius: 20px;
 }
 
-.St-VS {width: 75%;}
+.St-VS {width: 65%;}
     .St-Terml {width: 35%;}
 .St-Git {width: 47%;}
     .St-GitGit {width: 35%;}
 .St-Fig {width: 65%;}
-.St-HTML {width: 90%;}
+.St-HTML {width: 80%;}
 .St-CSS {width: 65%;}
 .St-JS {width: 45%;}
     .St-Node {width: 39%;}
     .St-React {width: 47%;}
-    .St-Astr {width: 58%;}
+    .St-Astr {width: 60%;}
 .St-PY {width: 48%;}
 .St-SQL {width: 43%;}
+    .St-Power {width: 90%;}
+    .St-Excel {width: 70%;}
+    .St-Word {width: 80%;}
 
 .Status-Animated {animation: Status 0.63s ease-out;}
 
